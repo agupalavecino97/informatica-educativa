@@ -1,1 +1,73 @@
-<p>evaluacion works!</p>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h1>Estadística Online</h1>
+      <span class="spacer"></span>
+      <div>
+        <a mat-button [routerLink]="'/teoria'"> 
+            <mat-icon>menu_book</mat-icon>
+            Teoría
+        </a>
+        <a mat-button [routerLink]="'/evaluacion'"> 
+            <mat-icon>edit</mat-icon>
+            AutoEvaluación 
+        </a>
+        <a mat-button [routerLink]="'/perfil'"> 
+          <mat-icon>person</mat-icon>
+            Perfil 
+        </a>
+      </div>
+    </mat-toolbar-row>
+    <mat-toolbar-row style="background: #5c6bc0;height: 40px;">
+        <h1>Módulo de AutoEvaluación </h1>
+      </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav style="background: #3f51b5;" mode="side" opened [disableClose]="true" >
+      <mat-nav-list>
+        <mat-list-item  (click)="verEvaluacion(1);modulo_actual = 1">
+            <span style="color: #FFF;" (click)="verEvaluacion(1);modulo_actual = 1">Evaluación 1</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(1);modulo_actual = 1" *ngIf="modulo_actual == 1">edit</mat-icon>
+        </mat-list-item>
+        
+        <div class="dropdown-divider"></div>
+  
+        <mat-list-item  (click)="verEvaluacion(2);modulo_actual = 2">
+            <span style="color: #FFF;" (click)="verEvaluacion(2);modulo_actual = 2">Evaluación 2</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(2);modulo_actual = 2" *ngIf="modulo_actual == 2">edit</mat-icon>
+        </mat-list-item>
+
+        <div class="dropdown-divider"></div>
+
+        <mat-list-item  (click)="verEvaluacion(3);modulo_actual = 3">
+            <span style="color: #FFF;" (click)="verEvaluacion(3);modulo_actual = 3">Evaluación 3</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(3);modulo_actual = 3" *ngIf="modulo_actual == 3">edit</mat-icon>
+        </mat-list-item>
+
+        <div class="dropdown-divider"></div>
+
+        <mat-list-item  (click)="verEvaluacion(4);modulo_actual = 4">
+            <span style="color: #FFF;" (click)="verEvaluacion(4);modulo_actual = 4">Evaluación 4</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(4);modulo_actual = 4" *ngIf="modulo_actual == 4">edit</mat-icon>
+        </mat-list-item>
+
+        <div class="dropdown-divider"></div>
+
+        <mat-list-item  (click)="verEvaluacion(5);modulo_actual = 5">
+            <span style="color: #FFF;" (click)="verEvaluacion(5);modulo_actual = 5">Evaluación 5</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(5);modulo_actual = 5" *ngIf="modulo_actual == 5">edit</mat-icon>
+        </mat-list-item>
+
+        <div class="dropdown-divider"></div>
+
+        <mat-list-item  (click)="verEvaluacion(6);modulo_actual = 6">
+            <span style="color: #FFF;" (click)="verEvaluacion(6);modulo_actual = 6">Evaluación 6</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(6);modulo_actual = 6" *ngIf="modulo_actual == 6">edit</mat-icon>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div style="height: 88vh;">
+            <h1>asdasdas</h1>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-evaluacion',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EvaluacionComponent implements OnInit {
 
-  constructor() { }
+  public estudiante; 
+  public modulo_actual: number;
+  constructor(private _router: Router,) { }
 
   ngOnInit(): void {
+    this.estudiante = localStorage.getItem('estudiante')
+    if (this.estudiante == '' || this.estudiante == null){
+      this._router.navigate(['login']);
+    }
+    this.modulo_actual = 1
   }
-
+  verEvaluacion(num: Number){
+    
+  }
 }
