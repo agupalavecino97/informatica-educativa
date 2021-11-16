@@ -13,6 +13,11 @@ import { PerfilComponent } from './components/perfil/perfil.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule } from '@angular/material/list'
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { APP_ROUTES } from './app.routes';
@@ -32,12 +37,20 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule, 
     // APP_ROUTES,
+    
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
+
+    //material
     MatCardModule,
     MatInputModule,
     MatButtonModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    FormsModule
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

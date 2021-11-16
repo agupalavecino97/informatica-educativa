@@ -23,7 +23,8 @@ import { map } from 'rxjs/operators';
         return this._http.get(this.url +'/'+dni, this.httpOptions)
         .pipe(map(res => {
             let response = JSON.parse(JSON.stringify(res))
-            localStorage.setItem('dni', dni);
+            console.log(response);
+            localStorage.setItem('estudiante', JSON.parse(JSON.stringify(res)));
             return response
             }));
     }

@@ -19,11 +19,11 @@ export class LoginComponent implements OnInit {
 
   
   login(){ 
-      console.log(this.dni_ingresado)
+      // console.log(this.dni_ingresado)
       this._estudianteService.obtenerEstudiante(this.dni_ingresado).subscribe(
         response =>{
           console.log(response)
-          if (response.length > 0){
+          if (response != null){
             this._router.navigate(['teoria']);
           }else{
             alert('dni inválido')

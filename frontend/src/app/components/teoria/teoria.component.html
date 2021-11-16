@@ -1,1 +1,131 @@
-<p>teoria works!</p>
+<!-- <ng-container>
+    <mat-toolbar color="primary">
+        <span>Estadística Online</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon>auto_stories</mat-icon>
+        </button>
+        <span> Autoevaluación </span>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>person</mat-icon>
+        </button>
+        <span> Mi Perfil</span>
+    </mat-toolbar>
+    <mat-sidenav-container class="sidenav-container" autosize>
+        <mat-sidenav #sidenav [mode]="side" class="sidenav" > 
+            <mat-nav-list>
+                <div class="brand-container">
+                    <span class="title text-white"> Módulo Teórico </span>
+                </div>
+                <div class="dropdown-divider"></div>
+    
+                <mat-list-item routerLinkActive="active">
+                    <span class="full-width" (click)="verTeoria(1)">Módulo 1</span>
+                    <mat-icon mat-list-icon (click)="verTeoria(1)">bookmark</mat-icon>
+                    <mat-icon mat-list-icon>arrow_drop_down</mat-icon>
+                </mat-list-item>
+                
+                <div class="dropdown-divider"></div>
+    
+    
+    
+                 <div class="submenu" [ngClass]="{'expanded' : showSubmenu}" *ngIf="(isShowing || isExpanded) && user.tipo == 1 && sucursal.plan > 0">
+                    <mat-list-item [routerLink]="['/formas-pago']" routerLinkActive="admin-active" matTooltip="Formas de Pago" [matTooltipPosition]="'right'" (click)="expand(); showSubmenu = !showSubmenu; print_admin_nav=true"
+                    [ngStyle]="{'pointer-events': !loadingPage && !loading_productos && !loading_clientes && !loading_proveedores && !loading_ventas ?'auto':'none'}"> 
+                        <span class="full-width" >Formas de Pago</span>
+                        <i class="fa fa-credit-card text-white" mat-list-icon></i>
+                    </mat-list-item>
+                    <mat-list-item *ngIf="sucursal.plan == 2"
+                        [routerLink]="['/proveedores']" routerLinkActive="admin-active" matTooltip="Proveedores" [matTooltipPosition]="'right'" (click)="expand(); showSubmenu = !showSubmenu; print_admin_nav=true"
+                        [ngStyle]="{'pointer-events': !loadingPage && !loading_productos && !loading_clientes && !loading_proveedores && !loading_ventas ?'auto':'none'}">
+                        <span class="full-width"> Proveedores </span>
+                        <i class="fa fa-users text-white" mat-list-icon></i>
+                    </mat-list-item>
+                  
+                </div> 
+            </mat-nav-list>
+        </mat-sidenav>
+     </mat-sidenav-container> -
+
+</ng-container> -->
+
+
+
+
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h1>Estadística Online</h1>
+      <span class="spacer"></span>
+      <div>
+        <a mat-button [routerLink]="'/teoria'"> 
+            <mat-icon>menu_book</mat-icon>
+            Teoría
+        </a>
+        <a mat-button [routerLink]="'/autoevaluacion'"> 
+            <mat-icon>edit</mat-icon>
+            AutoEvaluación 
+        </a>
+        <a mat-button [routerLink]="'/perfil'"> 
+          <mat-icon>person</mat-icon>
+            Perfil 
+        </a>
+      </div>
+    </mat-toolbar-row>
+
+  </mat-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav style="background: #3f51b5;" mode="side" opened [disableClose]="true" >
+      <mat-nav-list>
+        <mat-list-item  (click)="verTeoria(1);modulo_actual = 1">
+            <span style="color: #FFF;" (click)="verTeoria(1);modulo_actual = 1">Módulo 1</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(1);modulo_actual = 1" *ngIf="modulo_actual == 1">bookmark</mat-icon>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(1);modulo_actual = 1" *ngIf="modulo_actual != 1">bookmark_border</mat-icon>
+        </mat-list-item>
+        
+        <div class="dropdown-divider"></div>
+  
+        <mat-list-item  (click)="verTeoria(2);modulo_actual = 2">
+            <span style="color: #FFF;" (click)="verTeoria(2);modulo_actual = 2">Módulo 2</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(2);modulo_actual = 2" *ngIf="modulo_actual == 2">bookmark</mat-icon>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(2);modulo_actual = 2" *ngIf="modulo_actual != 2">bookmark_border</mat-icon>
+        </mat-list-item>
+
+        <div class="dropdown-divider"></div>
+
+        <mat-list-item  (click)="verTeoria(3);modulo_actual = 3">
+            <span style="color: #FFF;" (click)="verTeoria(3);modulo_actual = 3">Módulo 3</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(3);modulo_actual = 3" *ngIf="modulo_actual == 3">bookmark</mat-icon>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(3);modulo_actual = 3" *ngIf="modulo_actual != 3">bookmark_border</mat-icon>
+        </mat-list-item>
+
+        <div class="dropdown-divider"></div>
+
+        <mat-list-item  (click)="verTeoria(4);modulo_actual = 4">
+            <span style="color: #FFF;" (click)="verTeoria(4);modulo_actual = 4">Módulo 4</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(4);modulo_actual = 4" *ngIf="modulo_actual == 4">bookmark</mat-icon>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(4);modulo_actual = 4" *ngIf="modulo_actual != 4">bookmark_border</mat-icon>
+        </mat-list-item>
+
+        <div class="dropdown-divider"></div>
+
+        <mat-list-item  (click)="verTeoria(5);modulo_actual = 5">
+            <span style="color: #FFF;" (click)="verTeoria(5);modulo_actual = 5">Módulo 5</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(5);modulo_actual = 5" *ngIf="modulo_actual == 5">bookmark</mat-icon>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(5);modulo_actual = 5" *ngIf="modulo_actual != 5">bookmark_border</mat-icon>
+        </mat-list-item>
+
+        <div class="dropdown-divider"></div>
+
+        <mat-list-item  (click)="verTeoria(6);modulo_actual = 6">
+            <span style="color: #FFF;" (click)="verTeoria(6);modulo_actual = 6">Módulo 6</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(6);modulo_actual = 6" *ngIf="modulo_actual == 6">bookmark</mat-icon>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(6);modulo_actual = 6" *ngIf="modulo_actual != 6">bookmark_border</mat-icon>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div style="height: 88vh;">
+            <h1>asdasdas</h1>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
