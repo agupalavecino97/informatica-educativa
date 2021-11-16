@@ -22,9 +22,9 @@ import { map } from 'rxjs/operators';
     obtenerEstudiante(dni: string) {
         return this._http.get(this.url +'/'+dni, this.httpOptions)
         .pipe(map(res => {
-            let response = JSON.parse(JSON.stringify(res))
+            let response = JSON.stringify(res)
             console.log(response);
-            localStorage.setItem('estudiante', JSON.parse(JSON.stringify(res)));
+            localStorage.setItem('estudiante', response);
             return response
             }));
     }

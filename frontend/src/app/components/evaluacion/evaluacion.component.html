@@ -24,50 +24,207 @@
   <mat-sidenav-container>
     <mat-sidenav style="background: #3f51b5;" mode="side" opened [disableClose]="true" >
       <mat-nav-list>
-        <mat-list-item  (click)="verEvaluacion(1);modulo_actual = 1">
-            <span style="color: #FFF;" (click)="verEvaluacion(1);modulo_actual = 1">Evaluación 1</span>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(1);modulo_actual = 1" *ngIf="modulo_actual == 1">edit</mat-icon>
+        <mat-list-item  (click)="verEvaluacion(1)">
+            <span style="color: #FFF;" (click)="verEvaluacion(1)">Evaluación 1</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(1)" *ngIf="modulo_actual == 1">edit</mat-icon>
         </mat-list-item>
         
         <div class="dropdown-divider"></div>
   
-        <mat-list-item  (click)="verEvaluacion(2);modulo_actual = 2">
-            <span style="color: #FFF;" (click)="verEvaluacion(2);modulo_actual = 2">Evaluación 2</span>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(2);modulo_actual = 2" *ngIf="modulo_actual == 2">edit</mat-icon>
+        <mat-list-item  (click)="verEvaluacion(2)">
+            <span style="color: #FFF;" (click)="verEvaluacion(2)">Evaluación 2</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(2)" *ngIf="modulo_actual == 2">edit</mat-icon>
         </mat-list-item>
 
         <div class="dropdown-divider"></div>
 
-        <mat-list-item  (click)="verEvaluacion(3);modulo_actual = 3">
-            <span style="color: #FFF;" (click)="verEvaluacion(3);modulo_actual = 3">Evaluación 3</span>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(3);modulo_actual = 3" *ngIf="modulo_actual == 3">edit</mat-icon>
+        <mat-list-item  (click)="verEvaluacion(3)">
+            <span style="color: #FFF;" (click)="verEvaluacion(3)">Evaluación 3</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(3)" *ngIf="modulo_actual == 3">edit</mat-icon>
         </mat-list-item>
 
         <div class="dropdown-divider"></div>
 
-        <mat-list-item  (click)="verEvaluacion(4);modulo_actual = 4">
-            <span style="color: #FFF;" (click)="verEvaluacion(4);modulo_actual = 4">Evaluación 4</span>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(4);modulo_actual = 4" *ngIf="modulo_actual == 4">edit</mat-icon>
+        <mat-list-item  (click)="verEvaluacion(4)">
+            <span style="color: #FFF;" (click)="verEvaluacion(4)">Evaluación 4</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(4)" *ngIf="modulo_actual == 4">edit</mat-icon>
         </mat-list-item>
 
         <div class="dropdown-divider"></div>
 
-        <mat-list-item  (click)="verEvaluacion(5);modulo_actual = 5">
-            <span style="color: #FFF;" (click)="verEvaluacion(5);modulo_actual = 5">Evaluación 5</span>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(5);modulo_actual = 5" *ngIf="modulo_actual == 5">edit</mat-icon>
+        <mat-list-item  (click)="verEvaluacion(5)">
+            <span style="color: #FFF;" (click)="verEvaluacion(5)">Evaluación 5</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(5)" *ngIf="modulo_actual == 5">edit</mat-icon>
         </mat-list-item>
 
         <div class="dropdown-divider"></div>
 
-        <mat-list-item  (click)="verEvaluacion(6);modulo_actual = 6">
-            <span style="color: #FFF;" (click)="verEvaluacion(6);modulo_actual = 6">Evaluación 6</span>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(6);modulo_actual = 6" *ngIf="modulo_actual == 6">edit</mat-icon>
+        <mat-list-item  (click)="verEvaluacion(6)">
+            <span style="color: #FFF;" (click)="verEvaluacion(6)">Evaluación 6</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(6)" *ngIf="modulo_actual == 6">edit</mat-icon>
         </mat-list-item>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-      <div style="height: 88vh;">
-            <h1>asdasdas</h1>
-      </div>
+        <div class="container-page">
+            <mat-list>
+                <div mat-subheader>Pregunta 1</div>
+                <div mat-subheader>Verdadero y Falso</div>
+                <mat-list-item>  
+                    <div mat-line>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident nobis accusantium nostrum beatae rerum laborum ut, optio culpa molestias magni aspernatur quos, atque a iusto quam quod mollitia unde.</p>
+                    </div>
+                    <br>
+                    <div mat-line>
+                        <mat-radio-group style="position: absolute;" aria-label="Seleccione una opción">
+                            <mat-radio-button value="1">Verdadero</mat-radio-button>
+                            <mat-radio-button value="2">Falso</mat-radio-button>
+                        </mat-radio-group>    
+                    </div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <div mat-subheader>Pregunta 2</div>
+                <div mat-subheader>Complete el campo faltante</div>
+                <mat-list-item> 
+                    <div mat-line>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            <mat-form-field>
+                                <input class="form-control" type="text" matInput 
+                                placeholder="Completar" >
+                            </mat-form-field>
+                            Nisi velit quam natus? Fuga ullam similique pariatur iusto sit
+                        </p>
+                    </div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <div mat-subheader>Pregunta 3</div>
+                <div mat-subheader>Verdadero y Falso</div>
+                <mat-list-item>  
+                    <div mat-line>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident nobis accusantium nostrum beatae rerum laborum ut, optio culpa molestias magni aspernatur quos, atque a iusto quam quod mollitia unde.</p>
+                    </div>
+                    <br>
+                    <div mat-line>
+                        <mat-radio-group style="position: absolute;" aria-label="Seleccione una opción">
+                            <mat-radio-button value="1">Verdadero</mat-radio-button>
+                            <mat-radio-button value="2">Falso</mat-radio-button>
+                        </mat-radio-group>    
+                    </div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <div mat-subheader>Pregunta 4</div>
+                <div mat-subheader>Multiple Choice</div>
+                <mat-list-item>  
+                    <div mat-line>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident nobis accusantium nostrum beatae rerum laborum ut, optio culpa molestias magni aspernatur quos, atque a iusto quam quod mollitia unde.</p>
+                    </div>
+                    <br>
+                    <div mat-line>
+                        <mat-radio-group style="position: absolute;" aria-label="Seleccione una opción">
+                            <mat-radio-button value="1">choice 1</mat-radio-button>
+                            <mat-radio-button value="2">choice 2</mat-radio-button>
+                            <mat-radio-button value="3">choice 3</mat-radio-button>
+                            <mat-radio-button value="4">choice 4</mat-radio-button>
+                        </mat-radio-group>    
+                    </div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <div mat-subheader>Pregunta 5</div>
+                <div mat-subheader>Verdadero y Falso</div>
+                <mat-list-item>  
+                    <div mat-line>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident nobis accusantium nostrum beatae rerum laborum ut, optio culpa molestias magni aspernatur quos, atque a iusto quam quod mollitia unde.</p>
+                    </div>
+                    <br>
+                    <div mat-line>
+                        <mat-radio-group style="position: absolute;" aria-label="Seleccione una opción">
+                            <mat-radio-button value="1">Verdadero</mat-radio-button>
+                            <mat-radio-button value="2">Falso</mat-radio-button>
+                        </mat-radio-group>    
+                    </div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <div mat-subheader>Pregunta 6</div>
+                <div mat-subheader>Complete el campo faltante</div>
+                <mat-list-item> 
+                    <div mat-line>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            <mat-form-field>
+                                <input class="form-control" type="text" matInput 
+                                placeholder="Completar" >
+                            </mat-form-field>
+                            Nisi velit quam natus? Fuga ullam similique pariatur iusto sit
+                        </p>
+                    </div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <div mat-subheader>Pregunta 7</div>
+                <div mat-subheader>Multiple Choice</div>
+                <mat-list-item>  
+                    <div mat-line>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident nobis accusantium nostrum beatae rerum laborum ut, optio culpa molestias magni aspernatur quos, atque a iusto quam quod mollitia unde.</p>
+                    </div>
+                    <br>
+                    <div mat-line>
+                        <mat-radio-group style="position: absolute;" aria-label="Seleccione una opción">
+                            <mat-radio-button value="1">choice 1</mat-radio-button>
+                            <mat-radio-button value="2">choice 2</mat-radio-button>
+                            <mat-radio-button value="3">choice 3</mat-radio-button>
+                            <mat-radio-button value="4">choice 4</mat-radio-button>
+                        </mat-radio-group>    
+                    </div>
+                </mat-list-item>
+                <div mat-subheader>Pregunta 8</div>
+                <div mat-subheader>Complete el campo faltante</div>
+                <mat-list-item> 
+                    <div mat-line>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            <mat-form-field>
+                                <input class="form-control" type="text" matInput 
+                                placeholder="Completar" >
+                            </mat-form-field>
+                            Nisi velit quam natus? Fuga ullam similique pariatur iusto sit
+                        </p>
+                    </div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-divider></mat-divider>
+                <div mat-subheader>Pregunta 9</div>
+                <div mat-subheader>Verdadero y Falso</div>
+                <mat-list-item>  
+                    <div mat-line>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident nobis accusantium nostrum beatae rerum laborum ut, optio culpa molestias magni aspernatur quos, atque a iusto quam quod mollitia unde.</p>
+                    </div>
+                    <br>
+                    <div mat-line>
+                        <mat-radio-group style="position: absolute;" aria-label="Seleccione una opción">
+                            <mat-radio-button value="1">Verdadero</mat-radio-button>
+                            <mat-radio-button value="2">Falso</mat-radio-button>
+                        </mat-radio-group>    
+                    </div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <div mat-subheader>Pregunta 10</div>
+                <div mat-subheader>Multiple Choice</div>
+                <mat-list-item>  
+                    <div mat-line>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident nobis accusantium nostrum beatae rerum laborum ut, optio culpa molestias magni aspernatur quos, atque a iusto quam quod mollitia unde.</p>
+                    </div>
+                    <br>
+                    <div mat-line>
+                        <mat-radio-group style="position: absolute;" aria-label="Seleccione una opción">
+                            <mat-radio-button value="1">choice 1</mat-radio-button>
+                            <mat-radio-button value="2">choice 2</mat-radio-button>
+                            <mat-radio-button value="3">choice 3</mat-radio-button>
+                            <mat-radio-button value="4">choice 4</mat-radio-button>
+                        </mat-radio-group>    
+                    </div>
+                </mat-list-item>
+            </mat-list>
+        </div>
+    
     </mat-sidenav-content>
   </mat-sidenav-container>

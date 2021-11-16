@@ -23,6 +23,41 @@
   </mat-toolbar>
   <mat-sidenav-container>
 <div class="container">
-
-</div>
+    <div class="row">
+        <mat-card>
+            <mat-card-title>Perfil del Alumno</mat-card-title>
+            <mat-card-content>
+                <div class="row">
+                    <mat-form-field style="width: 33%;" appearance="fill" floatLabel="always">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput readonly value="{{estudiante.nombre}}" placeholder="Nombre">
+                    </mat-form-field>
+                     <mat-form-field style="width: 33%;" appearance="fill" floatLabel="always">
+                        <mat-label>Apellido</mat-label>
+                        <input matInput readonly value="{{estudiante.apellido}}" placeholder="Apellido">
+                    </mat-form-field> 
+                    <mat-form-field style="width: 33%;" appearance="fill" floatLabel="always">
+                        <mat-label>DNI</mat-label>
+                        <input matInput readonly value="{{estudiante.dni}}" placeholder="DNI">
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field style="width: 33%;" appearance="fill" floatLabel="always">
+                        <mat-label>Curso</mat-label>
+                        <input matInput readonly value="{{estudiante.curso}}" placeholder="Curso">
+                    </mat-form-field>
+                     <mat-form-field style="width: 33%;" appearance="fill" floatLabel="always">
+                        <mat-label>División</mat-label>
+                        <input matInput readonly value="{{estudiante.division}}" placeholder="División">
+                    </mat-form-field> 
+                    <mat-form-field style="width: 33%;" appearance="fill" floatLabel="always">
+                        <mat-label>Puntuación</mat-label>
+                        <input matInput readonly value="{{estudiante.puntuacion}}" placeholder="Puntuación">
+                    </mat-form-field>
+                </div>
+            </mat-card-content>
+        </mat-card>
+       
+    </div>
+</div>  
 

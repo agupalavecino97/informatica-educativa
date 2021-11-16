@@ -24,56 +24,62 @@
   <mat-sidenav-container>
     <mat-sidenav style="background: #3f51b5;" mode="side" opened [disableClose]="true" >
       <mat-nav-list>
-        <mat-list-item  (click)="verTeoria(1);modulo_actual = 1">
-            <span style="color: #FFF;" (click)="verTeoria(1);modulo_actual = 1">Módulo 1</span>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(1);modulo_actual = 1" *ngIf="modulo_actual == 1">bookmark</mat-icon>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(1);modulo_actual = 1" *ngIf="modulo_actual != 1">bookmark_border</mat-icon>
+        <mat-list-item  (click)="verTeoria(1)">
+            <span style="color: #FFF;" (click)="verTeoria(1)">Módulo 1</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(1)" *ngIf="modulo_actual == 1">bookmark</mat-icon>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(1)" *ngIf="modulo_actual != 1">bookmark_border</mat-icon>
         </mat-list-item>
         
         <div class="dropdown-divider"></div>
   
-        <mat-list-item  (click)="verTeoria(2);modulo_actual = 2">
-            <span style="color: #FFF;" (click)="verTeoria(2);modulo_actual = 2">Módulo 2</span>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(2);modulo_actual = 2" *ngIf="modulo_actual == 2">bookmark</mat-icon>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(2);modulo_actual = 2" *ngIf="modulo_actual != 2">bookmark_border</mat-icon>
+        <mat-list-item  (click)="verTeoria(2)">
+            <span style="color: #FFF;" (click)="verTeoria(2)">Módulo 2</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(2)" *ngIf="modulo_actual == 2">bookmark</mat-icon>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(2)" *ngIf="modulo_actual != 2">bookmark_border</mat-icon>
         </mat-list-item>
 
         <div class="dropdown-divider"></div>
 
-        <mat-list-item  (click)="verTeoria(3);modulo_actual = 3">
-            <span style="color: #FFF;" (click)="verTeoria(3);modulo_actual = 3">Módulo 3</span>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(3);modulo_actual = 3" *ngIf="modulo_actual == 3">bookmark</mat-icon>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(3);modulo_actual = 3" *ngIf="modulo_actual != 3">bookmark_border</mat-icon>
+        <mat-list-item  (click)="verTeoria(3)" >
+            <span style="color: #FFF;" (click)="verTeoria(3)">Módulo 3</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(3)" *ngIf="modulo_actual == 3">bookmark</mat-icon>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(3)" *ngIf="modulo_actual != 3">bookmark_border</mat-icon>
         </mat-list-item>
 
         <div class="dropdown-divider"></div>
 
-        <mat-list-item  (click)="verTeoria(4);modulo_actual = 4">
-            <span style="color: #FFF;" (click)="verTeoria(4);modulo_actual = 4">Módulo 4</span>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(4);modulo_actual = 4" *ngIf="modulo_actual == 4">bookmark</mat-icon>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(4);modulo_actual = 4" *ngIf="modulo_actual != 4">bookmark_border</mat-icon>
+        <mat-list-item  (click)="verTeoria(4)" >
+            <span style="color: #FFF;" (click)="verTeoria(4)">Módulo 4</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(4)" *ngIf="modulo_actual == 4">bookmark</mat-icon>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(4)" *ngIf="modulo_actual != 4">bookmark_border</mat-icon>
         </mat-list-item>
 
         <div class="dropdown-divider"></div>
 
-        <mat-list-item  (click)="verTeoria(5);modulo_actual = 5">
-            <span style="color: #FFF;" (click)="verTeoria(5);modulo_actual = 5">Módulo 5</span>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(5);modulo_actual = 5" *ngIf="modulo_actual == 5">bookmark</mat-icon>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(5);modulo_actual = 5" *ngIf="modulo_actual != 5">bookmark_border</mat-icon>
+        <mat-list-item  (click)="verTeoria(5)">
+            <span style="color: #FFF;" (click)="verTeoria(5)">Módulo 5</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(5)" *ngIf="modulo_actual == 5">bookmark</mat-icon>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(5)" *ngIf="modulo_actual != 5">bookmark_border</mat-icon>
         </mat-list-item>
 
         <div class="dropdown-divider"></div>
 
-        <mat-list-item  (click)="verTeoria(6);modulo_actual = 6">
-            <span style="color: #FFF;" (click)="verTeoria(6);modulo_actual = 6">Módulo 6</span>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(6);modulo_actual = 6" *ngIf="modulo_actual == 6">bookmark</mat-icon>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(6);modulo_actual = 6" *ngIf="modulo_actual != 6">bookmark_border</mat-icon>
+        <mat-list-item  (click)="verTeoria(6)">
+            <span style="color: #FFF;" (click)="verTeoria(6)">Módulo 6</span>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(6)" *ngIf="modulo_actual == 6">bookmark</mat-icon>
+            <mat-icon style="color: #FFF;" mat-list-icon (click)="verTeoria(6)" *ngIf="modulo_actual != 6">bookmark_border</mat-icon>
         </mat-list-item>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-      <div style="height: 88vh;">
-            <h1>asdasdas</h1>
-      </div>
+        <div class="row">
+            <div class="container">
+                <div *ngIf="modulo_actual==1"> 
+                    <h1>1. Introducción a la Probabilidad</h1>
+
+                </div>
+          </div>
+        </div>
+      
     </mat-sidenav-content>
   </mat-sidenav-container>

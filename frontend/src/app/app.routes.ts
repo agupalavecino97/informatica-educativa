@@ -6,8 +6,8 @@ import { EvaluacionComponent } from './components/evaluacion/evaluacion.componen
 import { PerfilComponent } from './components/perfil/perfil.component';
 
 const appRoutes: Routes = [
-    {   path: '',   redirectTo: '/login', pathMatch: 'full'},
-    {   path: '**',   redirectTo: '/login', pathMatch: 'full'},
+    { path: '',   redirectTo: '/login', pathMatch: 'full'},
+    { path: '**',   redirectTo: '/login', pathMatch: 'full'},
     { path: 'login', component: LoginComponent },
     { path: 'teoria', component: TeoriaComponent },
     { path: 'evaluacion', component: EvaluacionComponent },
