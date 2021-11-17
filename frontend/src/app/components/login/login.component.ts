@@ -7,7 +7,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  providers: [EstudianteService]
+  providers: []
 })
 export class LoginComponent implements OnInit {
   
@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
         response =>{
           console.log(response)
           if (response != null){
-            this._router.navigate(['teoria']);
+            this._router.navigate(['perfil']);
           }else{
             alert('dni inválido')
             this.dni_ingresado = null;

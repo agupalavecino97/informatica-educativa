@@ -66,21 +66,96 @@
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-        <div class="container-page">
-            <mat-list>
+        <div class="container-page" *ngIf="modulo_actual == 1">
+            <h2>Completa los recuadros con los adjetivos posesivos correctos.</h2>
+            <mat-card class="example-card">
+                <img mat-card-image src="../../../assets/imgs/5.jpg" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+                <mat-card-content>
+                  <p>
+                    Paul lives in a flat. This is  <mat-form-field>
+                        <input class="form-control" type="text" matInput 
+                        [(ngModel)]="input1"
+                        placeholder="Completar" >
+                    </mat-form-field> flat.
+                  </p>
+                </mat-card-content>
+              </mat-card>
+            <hr>
+            <mat-card class="example-card">
+                <img mat-card-image src="../../../assets/imgs/6.jpg" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+                <mat-card-content>
+                  <p>
+                    Today it's <mat-form-field>
+                        <input class="form-control" type="text" matInput 
+                        [(ngModel)]="input2"
+                        placeholder="Completar" >
+                    </mat-form-field> birthday.
+                  </p>
+                </mat-card-content>
+            </mat-card>
+            <hr>
+            <mat-card class="example-card">
+                <img mat-card-image src="../../../assets/imgs/7.jpg" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+                <mat-card-content>
+                  <p>
+                    Paul dances with  <mat-form-field>
+                        <input class="form-control" type="text" matInput 
+                        [(ngModel)]="input3"
+                        placeholder="Completar" >
+                    </mat-form-field> girlfriend.
+                  </p>
+                </mat-card-content>
+            </mat-card>
+            <hr>
+            <mat-card class="example-card">
+                <img mat-card-image src="../../../assets/imgs/8.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+                <mat-card-content>
+                  <p>
+                    We have a son. This is  <mat-form-field>
+                        <input class="form-control" type="text" matInput 
+                        [(ngModel)]="input4"
+                        placeholder="Completar" >
+                    </mat-form-field> son.
+                  </p>
+                </mat-card-content>
+            </mat-card>
+            <hr>
+            <mat-card class="example-card">
+                <img mat-card-image src="../../../assets/imgs/9.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+                <mat-card-content>
+                  <p>
+                    You work with  <mat-form-field>
+                        <input class="form-control" type="text" matInput 
+                        [(ngModel)]="input5"
+                        placeholder="Completar" >
+                    </mat-form-field> hands.
+                  </p>
+                </mat-card-content>
+            </mat-card>
+            <hr>
+            <mat-card class="example-card">
+                <img mat-card-image src="../../../assets/imgs/10.jpg" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+                <mat-card-content>
+                  <p>
+                    <mat-form-field>
+                        <input class="form-control" type="text" matInput 
+                        [(ngModel)]="input6"
+                        placeholder="Completar" >
+                    </mat-form-field> glasses are black.
+                  </p>
+                </mat-card-content>
+            </mat-card>
+            <button mat-raised-button color="accent" (click)="ComprobarEvaluacion(1)" style=float:right>
+                <mat-icon>edit</mat-icon>
+                Verificar
+            </button>
+            <!-- <mat-list>
                 <div mat-subheader>Pregunta 1</div>
-                <div mat-subheader>Verdadero y Falso</div>
                 <mat-list-item>  
                     <div mat-line>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident nobis accusantium nostrum beatae rerum laborum ut, optio culpa molestias magni aspernatur quos, atque a iusto quam quod mollitia unde.</p>
+                        
                     </div>
                     <br>
-                    <div mat-line>
-                        <mat-radio-group style="position: absolute;" aria-label="Seleccione una opción">
-                            <mat-radio-button value="1">Verdadero</mat-radio-button>
-                            <mat-radio-button value="2">Falso</mat-radio-button>
-                        </mat-radio-group>    
-                    </div>
                 </mat-list-item>
                 <mat-divider></mat-divider>
                 <div mat-subheader>Pregunta 2</div>
@@ -223,7 +298,7 @@
                         </mat-radio-group>    
                     </div>
                 </mat-list-item>
-            </mat-list>
+            </mat-list> -->
         </div>
     
     </mat-sidenav-content>

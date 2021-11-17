@@ -31,13 +31,14 @@ model.getEstudiante = function(dni, callback){
 
 model.actualizarEstudiante = function(data, callback){	
 	if(connection){	
+        console.log(data);
         var actualizacion = 'UPDATE estudiantes SET ' + 
-        'puntuacion = ' + connection.escape(data.puntuacion) +' ' +
-        'WHERE dni = ' + connection.escape(data.dni);
+        'puntuacion = ' + connection.escape(data.puntuacion) +
+        ' WHERE dni = ' + connection.escape(data.dni);
         // console.log(actualizacion);
         connection.query(actualizacion, function(error, result) {
             if(error) {   
-                //throw error;
+                throw error;
                 callback(null, {"error": 'ERROR actualizacion.'});
             }
             else{		

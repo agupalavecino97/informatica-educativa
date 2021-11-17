@@ -21,7 +21,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
 
+
+import { EstudianteService } from './services/estudiante.service'
 import { AppRoutingModule } from './app-routing.module';
 import { APP_ROUTES } from './app.routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -56,9 +59,10 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatRadioModule,
     MatProgressBarModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule
   ],
-  providers: [],
+  providers: [EstudianteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
