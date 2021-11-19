@@ -80,7 +80,7 @@
                 <img mat-card-image src="../../../assets/imgs/5.jpg" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
                 <mat-card-content>
                   <p>
-                    Paul lives in a flat. This is  <mat-form-field>
+                    Maria lives in a flat. This is  <mat-form-field>
                         <input class="form-control" type="text" matInput 
                         [(ngModel)]="input1"
                         placeholder="Completar" >
@@ -407,8 +407,19 @@
                 Verificar
             </button>
         </div>
-        <div class="container page" *ngIf="modulo_actual == 3">
-            <p>En desarrollo</p>
+        <div class="container page" *ngIf="revision">
+            <div class="container-page">
+                <h3>Revisión</h3>
+                <ul>
+                    <li *ngFor="let item of respuestas"> {{item}} </li>
+                </ul>
+            </div>
+            <button mat-raised-button color="accent" (click)="irPerfil()" style="position: absolute;right: 10px;bottom: 10px;">
+                <mat-icon>edit</mat-icon>
+                OK
+            </button>
         </div>
+
+        
     </mat-sidenav-content>
   </mat-sidenav-container>

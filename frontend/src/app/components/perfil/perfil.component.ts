@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { EstudianteService } from '../../services/estudiante.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-perfil',
@@ -11,7 +12,7 @@ import { EstudianteService } from '../../services/estudiante.service';
 export class PerfilComponent implements OnInit {
 
   public estudiante; 
-  constructor(private _router: Router,private _estudianteService: EstudianteService) { }
+  constructor(private _router: Router,private _estudianteService: EstudianteService, private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this._estudianteService.estudiante.subscribe(
@@ -27,12 +28,9 @@ export class PerfilComponent implements OnInit {
 
   logout(){
     this.estudiante = null;
-    this._estudianteService.actualizarEstudiante(this.estudiante).subscribe(
-      response => {
-          this._router.navigate(['/login']);
-      }
-    )
+    this._estudianteService.updateEstudiante(this.estudiante);
+    this._router.navigate(['/login']);
 
   }
-  
+
 }

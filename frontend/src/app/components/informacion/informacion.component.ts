@@ -27,11 +27,7 @@ export class InformacionComponent implements OnInit {
 
   logout(){
     this.estudiante = null;
-    this._estudianteService.actualizarEstudiante(this.estudiante).subscribe(
-      response => {
-          this._router.navigate(['/login']);
-      }
-    )
-
+    this._estudianteService.updateEstudiante(this.estudiante);
+    this._router.navigate(['/login']);
   }
 }

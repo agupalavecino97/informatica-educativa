@@ -22,7 +22,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { EstudianteService } from './services/estudiante.service'
 import { AppRoutingModule } from './app-routing.module';
@@ -62,7 +63,9 @@ import { InformacionComponent } from './components/informacion/informacion.compo
     MatRadioModule,
     MatProgressBarModule,
     MatSelectModule,
-    MatTableModule
+    MatTableModule,
+    MatSnackBarModule,
+    MatDialogModule
   ],
   providers: [EstudianteService],
   bootstrap: [AppComponent]

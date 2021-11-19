@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { EstudianteService } from '../../services/estudiante.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class LoginComponent implements OnInit {
   
   public dni_ingresado: string;
-  constructor(private _estudianteService: EstudianteService, private _router: Router,) { }
+  constructor(private _estudianteService: EstudianteService, private _router: Router,private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -23,11 +24,11 @@ export class LoginComponent implements OnInit {
       this._estudianteService.obtenerEstudiante(this.dni_ingresado).subscribe(
         response =>{
           console.log(response)
-          if (response != null){
-            this._router.navigate(['/informacion']);
-          }else{
-            alert('dni inválido')
+          if (response.message){
+            this._snackBar.open('dni inválido','OK');
             this.dni_ingresado = null;
+          }else{
+            this._router.navigate(['/informacion']);
           }
       });
   }  
