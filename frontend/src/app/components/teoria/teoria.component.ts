@@ -34,9 +34,13 @@ export class TeoriaComponent implements OnInit {
       res => {this.estudiante = res }
     );
     if (this.estudiante.nombre == ''){
-      this._router.navigate(['login']);
+      this._router.navigate(['/login']);
     }
-    this.modulo_actual = 1
+    if (this.estudiante.puntuacion <50){
+      this.modulo_actual = 1
+    }else{
+      this.modulo_actual = 2
+    }
   }
 
   verTeoria(num: number){
@@ -44,17 +48,17 @@ export class TeoriaComponent implements OnInit {
         this.modulo_actual = 1;
     }
     else if (num == 2){
-      if (this.estudiante.puntuacion >= 40){
+      if (this.estudiante.puntuacion >= 50){
         this.modulo_actual = 2;
       }else{
-        alert('Para visualizar este módulo se necesita una puntuación de 40 o más')
+        alert('Para visualizar este módulo se necesita una puntuación de 50 o más')
       }
     }
     else if (num == 3){
-      if (this.estudiante.puntuacion >= 80){
+      if (this.estudiante.puntuacion >= 100){
         this.modulo_actual = 3;
       }else{
-        alert('Para visualizar este módulo se necesita una puntuación de 80 o más')
+        alert('Para visualizar este módulo se necesita una puntuación de 100 o más')
       }     
     }
     else if (num == 4){
@@ -65,22 +69,32 @@ export class TeoriaComponent implements OnInit {
       }
     }
     else if (num == 5){
-      if (this.estudiante.puntuacion >= 190){
+      if (this.estudiante.puntuacion >= 200){
         this.modulo_actual = 5;
       }else{
-        alert('Para visualizar este módulo se necesita una puntuación de 190 o más')     
+        alert('Para visualizar este módulo se necesita una puntuación de 200 o más')     
       }
     }
     else if (num == 6){
-      if (this.estudiante.puntuacion >= 230){
+      if (this.estudiante.puntuacion >= 250){
         this.modulo_actual = 6;
       }else{
-        alert('Para visualizar este módulo se necesita una puntuación de 230 o más')
+        alert('Para visualizar este módulo se necesita una puntuación de 250 o más')
       }      
     }
   }
   irEvaluacion(){
     this._router.navigate(['/evaluacion']);
+
+  }
+
+  logout(){
+    this.estudiante = null;
+    this._estudianteService.actualizarEstudiante(this.estudiante).subscribe(
+      response => {
+          this._router.navigate(['/login']);
+      }
+    )
 
   }
 }

@@ -1,3 +1,6 @@
+.container-page{
+    padding: 30px;
+}
 .spacer {
     flex: 1 1 auto;
 }
@@ -166,18 +169,4 @@
 
 .mat-list-icon:before{
     vertical-align: middle;
-}
-
-.container-page{
-  padding: 30px;
-}
-
-.mat-table{
-    width: 50%;
-    left: 20%;
-    // position: absolute;
-}
-
-.example-card {
-  max-width: 300px;
 }

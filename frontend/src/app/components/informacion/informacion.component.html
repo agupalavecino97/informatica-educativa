@@ -1,0 +1,60 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h1>Estadística Online</h1>
+      <span class="spacer"></span>
+      <div>
+        <a mat-button [routerLink]="'/teoria'"> 
+            <mat-icon>menu_book</mat-icon>
+            Teoría
+        </a>
+        <a mat-button [routerLink]="'/evaluacion'"> 
+            <mat-icon>edit</mat-icon>
+            AutoEvaluación 
+        </a>
+        <a mat-button [routerLink]="'/perfil'"> 
+          <mat-icon>person</mat-icon>
+            Perfil 
+        </a>
+        <a mat-button [routerLink]="'/informacion'"> 
+            <mat-icon>info</mat-icon>
+              Información 
+        </a>
+        <a mat-button (click)="logout()"> 
+            <mat-icon>exit_to_app</mat-icon>
+              Salir 
+        </a>
+      </div>
+    </mat-toolbar-row>
+    <mat-toolbar-row style="background: #5c6bc0;height: 40px;">
+        <h1>Información</h1>
+      </mat-toolbar-row>
+  </mat-toolbar>
+<div class="container-page">
+    <mat-card>
+        <mat-card-title>Módulos Teóricos</mat-card-title>
+        <mat-card-subtitle>Aqui podrás encontrar las lecciones de Pronombres y Present Simple, una vez estudiado los temas aquí explicados tendrás que realizar la autoevaluación para poder desbloquear nuevos módulos.</mat-card-subtitle>
+    </mat-card>
+    <br>
+    <mat-card>
+        <mat-card-title>Módulos AutoEvaluación</mat-card-title>
+        <mat-card-subtitle>Aqui podrás encontrar las evaluaciónes para poder pasar a un nuevo módulo teórico, cada pregunta respondida correctamente sumará 10 puntos, para pasar a un nuevo módulo es necesario acumular 50 puntos en el cuastionario.</mat-card-subtitle>
+    </mat-card>
+    <br>
+    <mat-card>
+        <mat-card-title>Módulos Perfil</mat-card-title>
+        <mat-card-subtitle>Aqui podrás encontrar tu información personal y tu puntuación.</mat-card-subtitle>
+    </mat-card>
+    <br>
+    <mat-card>
+        <mat-card-title>Sitio Creado por</mat-card-title>
+        <mat-card-content>
+            <ul>
+                <li>Acosta Denis</li>
+                <li>Palavecino Agustín</li>
+                <li>Veliz Daniel</li>
+            </ul>
+        </mat-card-content>
+      
+    </mat-card>
+    <br>
+</div>

@@ -15,6 +15,14 @@
           <mat-icon>person</mat-icon>
             Perfil 
         </a>
+        <a mat-button [routerLink]="'/informacion'"> 
+            <mat-icon>info</mat-icon>
+              Información 
+        </a>
+        <a mat-button (click)="logout()"> 
+            <mat-icon>exit_to_app</mat-icon>
+              Salir 
+        </a>
       </div>
     </mat-toolbar-row>
     <mat-toolbar-row style="background: #5c6bc0;height: 40px;">
@@ -145,7 +153,37 @@
                   </p>
                 </mat-card-content>
             </mat-card>
-            <button mat-raised-button color="accent" (click)="ComprobarEvaluacion(1)" style="position: absolute;right: 10 px;bottom: 10px;">
+            <hr>
+            <h4>Elige la opción más adecuada para responder a las siguientes preguntas.</h4>
+            <p>Are you married?</p>
+            <mat-radio-group [(ngModel)]="radio5" style="position: absolute;" aria-label="Seleccione una opción">
+                <mat-radio-button [value]="1">Yes, I do</mat-radio-button>
+                <mat-radio-button [value]="2">Yes, I am.</mat-radio-button>
+            </mat-radio-group> 
+            <br>
+            <hr>
+            <p>Do you have any brothers or sisters?</p>
+            <mat-radio-group [(ngModel)]="radio6" style="position: absolute;" aria-label="Seleccione una opción">
+                <mat-radio-button [value]="1">I have two sons.</mat-radio-button>
+                <mat-radio-button [value]="2">I have two brothers.</mat-radio-button>
+            </mat-radio-group> 
+            <br>
+            <hr>
+            <p>Is he your nephew?</p>
+            <mat-radio-group [(ngModel)]="radio7" style="position: absolute;" aria-label="Seleccione una opción">
+                <mat-radio-button [value]="1">No, he isn't.</mat-radio-button>
+                <mat-radio-button [value]="2">No, he don't.</mat-radio-button>
+            </mat-radio-group> 
+            <br>
+            <hr>
+            <p>What does your wife do?</p>
+            <mat-radio-group [(ngModel)]="radio8" style="position: absolute;" aria-label="Seleccione una opción">
+                <mat-radio-button [value]="1">She's a housewife.</mat-radio-button>
+                <mat-radio-button [value]="2">Yes, she is.</mat-radio-button>
+            </mat-radio-group> 
+            <br>
+            <hr>
+            <button mat-raised-button color="accent" (click)="ComprobarEvaluacion(1)" style="position: absolute;right: 10px;bottom: 10px;">
                 <mat-icon>edit</mat-icon>
                 Verificar
             </button>
@@ -300,6 +338,77 @@
                 </mat-list-item>
             </mat-list> -->
         </div>
-    
+        <div class="container-page" *ngIf="modulo_actual == 2">
+            <h4>Reescribe las siguientes oraciones en forma negativa. <strong> Respeta las mayúsculas, minúsculas y signos de puntuación. no se aceptan los ' </strong></h4>
+            <p>I go to school everyday.</p>
+            <input class="form-control" type="text" matInput 
+            [(ngModel)]="input7"
+            placeholder="Completar" >
+            <hr>
+            <p>Laura is very tired.</p>
+            <input class="form-control" type="text" matInput 
+            [(ngModel)]="input8"
+            placeholder="Completar" >
+            <hr>
+            <p>My hobby is collecting stamps.</p>
+            <input class="form-control" type="text" matInput 
+            [(ngModel)]="input9"
+            placeholder="Completar" >
+            <hr>
+            <p>Hugh has breakfast at seven.</p>
+            <input class="form-control" type="text" matInput 
+            [(ngModel)]="input10"
+            placeholder="Completar" >
+            <hr>
+            <p>Thomas and Nick play tennis all day.</p>
+            <input class="form-control" type="text" matInput 
+            [(ngModel)]="input11"
+            placeholder="Completar" >
+            <hr>
+            <p>The plane is full.</p>
+            <input class="form-control" type="text" matInput 
+            [(ngModel)]="input12"
+            placeholder="Completar" >
+            <hr>
+            <p>I read a lot of books.</p>
+            <input class="form-control" type="text" matInput 
+            [(ngModel)]="input13"
+            placeholder="Completar" >
+            <hr>
+            <h4>Elige la opción más adecuada para responder a las siguientes preguntas.</h4>
+            <p>Do you live in London?</p>
+            <mat-radio-group [(ngModel)]="radio1" style="position: absolute;" aria-label="Seleccione una opción">
+                <mat-radio-button [value]="1">Yes, I do</mat-radio-button>
+                <mat-radio-button [value]="2">Yes, I am.</mat-radio-button>
+            </mat-radio-group> 
+            <br>
+            <hr>
+            <p>Does she usually go to the cinema?</p>
+            <mat-radio-group [(ngModel)]="radio2" style="position: absolute;" aria-label="Seleccione una opción">
+                <mat-radio-button [value]="1">Yes, she does.</mat-radio-button>
+                <mat-radio-button [value]="2">Yes, she do.</mat-radio-button>
+            </mat-radio-group>
+            <br>
+            <hr>
+            <p>Where do you live?</p>
+            <mat-radio-group [(ngModel)]="radio3" style="position: absolute;" aria-label="Seleccione una opción">
+                <mat-radio-button [value]="1">I live in Manchester.</mat-radio-button>
+                <mat-radio-button [value]="2">Yes, I do.</mat-radio-button>
+            </mat-radio-group>
+            <br>
+            <hr>
+            <p>Does he always get up at seven?</p>
+            <mat-radio-group [(ngModel)]="radio4"style="position: absolute;" aria-label="Seleccione una opción">
+                <mat-radio-button [value]="1">Yes, he do.</mat-radio-button>
+                <mat-radio-button [value]="2">Yes, he does.</mat-radio-button>
+            </mat-radio-group>
+            <button mat-raised-button color="accent" (click)="ComprobarEvaluacion(2)" style="position: absolute;right: 10px;bottom: 10px;">
+                <mat-icon>edit</mat-icon>
+                Verificar
+            </button>
+        </div>
+        <div class="container page" *ngIf="modulo_actual == 3">
+            <p>En desarrollo</p>
+        </div>
     </mat-sidenav-content>
   </mat-sidenav-container>

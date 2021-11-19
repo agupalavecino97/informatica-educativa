@@ -15,6 +15,14 @@
           <mat-icon>person</mat-icon>
             Perfil 
         </a>
+        <a mat-button [routerLink]="'/informacion'"> 
+          <mat-icon>info</mat-icon>
+            Información 
+        </a>
+        <a mat-button (click)="logout()"> 
+            <mat-icon>exit_to_app</mat-icon>
+              Salir 
+        </a>
       </div>
     </mat-toolbar-row>
     <mat-toolbar-row style="background: #5c6bc0;height: 40px;">
@@ -106,7 +114,7 @@
               </mat-card-content>
             </mat-card>
             <mat-card class="example-card">
-              <img mat-card-image src="../../../assets/imgs/2.png" style="max-width: 00px;max-height: 300px;" alt="Photo 1">
+              <img mat-card-image src="../../../assets/imgs/2.png" style="max-width: 300px;max-height: 300px;" alt="Photo 2">
               <mat-card-content>
                 <p>
                   my books / mis libros
@@ -176,6 +184,7 @@
                 </p>
               </mat-card-content>
             </mat-card>
+            <hr>
             <button mat-raised-button color="primary" style="position: absolute;right: 10 px;bottom: 10px;" (click)="irEvaluacion()" style=float:right>
               <mat-icon>edit</mat-icon>
               Ir a la evaluación
@@ -221,6 +230,164 @@
             
             </mat-list> -->
         </div>
-      
+        <div *ngIf="modulo_actual==2" class="container-page"> 
+
+          <h1>2. Simple Present - Presente Simple</h1>
+          <p>El tiempo Presente Simple es el tiempo de verbo que se utiliza, entre otras cosas, para expresar acciones, eventos o situaciones al momento en que se habla. Por ejemplo:</p>
+          <mat-card class="example-card">
+            <img mat-card-image src="../../../assets/imgs/11.jpg" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+            <mat-card-content>
+              <p>
+                Ann is a teacher.
+              </p>
+              <p>
+                Ann es maestra.
+              </p>
+              <br>
+              <p>
+                She lives in London.
+              </p>
+              <p>
+                Vive en Londres.
+              </p>
+              <br>
+              <p>
+                She wears glasses.
+              </p>
+              <p>
+                Ella usa anteojos.
+              </p>
+            </mat-card-content>
+          </mat-card>      
+        
+        
+          <p>Este tiempo también se usa para expresar acciones habituales, que transcurren con cierta frecuencia. Por ejemplo:</p>
+        
+          <mat-card class="example-card">
+            <mat-card-content>
+              <p>
+                Ann gets up at 7.
+              </p>
+              <p>
+                Ann se despierta a las 7.
+              </p>
+              <br>
+              <p>
+                She usually has breakfast at 8.
+              </p>
+              <p>
+                Usualmente desayuna a las 8.
+              </p>
+              <br>
+              <p>
+                She never arrives late.
+              </p>
+              <p>
+                Nunca llega tarde.
+              </p>
+            </mat-card-content>
+          </mat-card>
+          <hr>
+          <p>Recordemos: Al conjugar los verbos en tiempo presente, debe agregarse para la tercera persona del singular (He / She / It) una "s" al verbo base, mientras que para las demás personas el verbo permanece igual.</p>
+          <ul>
+            <li>I <strong> live  </strong> in London.
+            <li>You <strong> live  </strong> in London.
+            <li>He <strong> lives  </strong> in London.
+            <li>She <strong> lives  </strong> in London.
+            <li>We <strong> live  </strong> in London.
+            <li>They <strong> live  </strong> in London.
+          </ul>
+          <hr>
+          <p>Pero cuando el verbo base termina en vocal (por ejemplo, "to go") se agrega "es" para la tercera persona del singular:</p>
+          <ul>
+            <li>I <strong> go </strong> to the cinema.
+            <li>You <strong> go </strong> to the cinema.
+            <li>He <strong> goes </strong> to the cinema.
+            <li>She <strong> goes </strong> to the cinema.
+            <li>We <strong> go </strong> to the cinema.
+            <li>They <strong> go </strong> to the cinema.
+          </ul>
+          <hr>
+
+          <p>Para realizar preguntas en este tiempo verbal, se usa el auxiliar <strong> DO o DOES </strong>   para la tercera persona del singular, como ya hemos visto. Y se contesta con Yes / No seguido de la persona y su auxiliar correspondiente afirmativo o negativo.</p>
+          <mat-card class="example-card">
+            <mat-card-content>
+              <p>
+                <strong> Do </strong>  you live in London?
+              </p>
+              <p>
+                Yes, I <strong> do. </strong> 
+              </p>
+              <br>
+              <p>
+                <strong> Does </strong>  she go to the cinema?
+              </p>
+              <p>
+                No, she <strong> doesn't. </strong> 
+              </p>
+            </mat-card-content>
+          </mat-card>
+          
+          <hr>
+          <p>Para realizar una pregunta específica, se usa la "question word" <strong> (where, when, what, how, etc.) </strong>  y luego, se sigue el mismo método. Se responde usando la frase completa.</p>
+          <h3>Si se está hablando de una persona y se describe su casa, se usaría his o her, según el sexo de dicha persona.</h3>
+          
+          <mat-card class="example-card">
+            <img mat-card-image src="../../../assets/imgs/15.gif" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+            <mat-card-content>
+              <p>
+                <strong> How </strong> does she go to school?
+              </p>
+              <p>
+                She goes on foot.
+              </p>
+            </mat-card-content>
+          </mat-card>
+          <hr>
+          <mat-card class="example-card">
+            <img mat-card-image src="../../../assets/imgs/12.gif" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+            <mat-card-content>
+              <p>
+                <strong> Where </strong> do they go?.
+              </p>
+              <p>
+                They go to the cinema.
+              </p>
+            </mat-card-content>
+          </mat-card>
+          <hr>
+          <mat-card class="example-card">
+            <img mat-card-image src="../../../assets/imgs/13.gif" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+            <mat-card-content>
+              <p>
+                <strong> What </strong> do you do on Sundays?
+              </p>
+              <p>
+                I do the laundry.
+              </p>
+            </mat-card-content>
+          </mat-card>
+          <hr>
+          <mat-card class="example-card">
+            <img mat-card-image src="../../../assets/imgs/14.gif" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+            <mat-card-content>
+              <p>
+                <strong> When </strong>does she read the paper?
+              </p>
+              <p>
+                She reads the paper from Monday to Friday.
+              </p>
+            </mat-card-content>
+          </mat-card>
+          <hr>
+          
+          <button mat-raised-button color="primary" style="position: absolute;right: 10 px;bottom: 10px;" (click)="irEvaluacion()" style=float:right>
+            <mat-icon>edit</mat-icon>
+            Ir a la evaluación
+          </button>
+      </div>
+      <div *ngIf="modulo_actual==3" class="container-page">
+          <p>En desarrollo</p>
+      </div> 
     </mat-sidenav-content>
   </mat-sidenav-container>

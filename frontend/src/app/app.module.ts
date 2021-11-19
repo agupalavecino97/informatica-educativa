@@ -26,10 +26,11 @@ import {MatTableModule} from '@angular/material/table';
 
 import { EstudianteService } from './services/estudiante.service'
 import { AppRoutingModule } from './app-routing.module';
-import { APP_ROUTES } from './app.routes';
+// import { APP_ROUTES } from './app.routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { InformacionComponent } from './components/informacion/informacion.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     EvaluacionComponent,
     PerfilComponent,
+    InformacionComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,13 +4,16 @@ import { TeoriaComponent } from './components/teoria/teoria.component';
 import { LoginComponent } from './components/login/login.component';
 import { EvaluacionComponent } from './components/evaluacion/evaluacion.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { InformacionComponent } from './components/informacion/informacion.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  // { path: '**', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent},
   { path: 'teoria', component: TeoriaComponent},
   { path: 'evaluacion', component: EvaluacionComponent},
-  { path: 'perfil', component: PerfilComponent}
+  { path: 'perfil', component: PerfilComponent},
+  { path: 'informacion', component: InformacionComponent},
   
   // { path: ':company_name', component: HomePageModule},
   

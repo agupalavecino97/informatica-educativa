@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
         response =>{
           console.log(response)
           if (response != null){
-            this._router.navigate(['perfil']);
+            this._router.navigate(['/informacion']);
           }else{
             alert('dni inválido')
             this.dni_ingresado = null;
