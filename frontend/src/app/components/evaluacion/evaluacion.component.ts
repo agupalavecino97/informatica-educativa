@@ -1,5 +1,6 @@
 import { stringify } from '@angular/compiler/src/util';
-import { Component, Inject, OnInit } from '@angular/core';
+// import { Component, Inject, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { Estudiante } from 'src/app/models/estudiante.model';
 import { EstudianteService } from '../../services/estudiante.service';
@@ -12,6 +13,7 @@ import {MatDialog} from '@angular/material/dialog';
   styleUrls: ['./evaluacion.component.scss'],
   providers: []
 })
+
 export class EvaluacionComponent implements OnInit {
 
   public estudiante; 
@@ -72,47 +74,48 @@ export class EvaluacionComponent implements OnInit {
     this.revision = false;
   }
 
-  verEvaluacion(num: Number){
-  if (num == 1){
-    if (this.estudiante.puntuacion < 50){
-      this.modulo_actual = 1;
-    }
-  }
-  else if (num == 2){
-    if (this.estudiante.puntuacion >= 50){
-      this.modulo_actual = 2;
-    }else{
-      this._snackBar.open('Para visualizar este módulo se necesita una puntuación de 50 o más','OK'); 
-    }
-  }
-  else if (num == 3){
-    if (this.estudiante.puntuacion >= 100){
-      this.modulo_actual = 3;
-    }else{
-      this._snackBar.open('Para visualizar este módulo se necesita una puntuación de 100 o más','OK'); 
-    }     
-  }
-  else if (num == 4){
-    if (this.estudiante.puntuacion >= 150){
-      this.modulo_actual = 4;
-    }else{
-      this._snackBar.open('Para visualizar este módulo se necesita una puntuación de 150 o más','OK'); 
-    }
-  }
-  else if (num == 5){
-    if (this.estudiante.puntuacion >= 200){
-      this.modulo_actual = 5;
-    }else{
-      this._snackBar.open('Para visualizar este módulo se necesita una puntuación de 200 o más','OK'); 
-    }
-  }
-  else if (num == 6){
-    if (this.estudiante.puntuacion >= 250){
-      this.modulo_actual = 6;
-    }else{
-      this._snackBar.open('Para visualizar este módulo se necesita una puntuación de 250 o más','OK'); 
-    }      
-  }
+  verEvaluacion(num: number){
+  this.modulo_actual = num;
+  // if (num == 1){
+  //   if (this.estudiante.puntuacion < 50){
+  //     this.modulo_actual = 1;
+  //   }
+  // }
+  // else if (num == 2){
+  //   if (this.estudiante.puntuacion >= 50){
+  //     this.modulo_actual = 2;
+  //   }else{
+  //     this._snackBar.open('Para visualizar este módulo se necesita una puntuación de 50 o más','OK'); 
+  //   }
+  // }
+  // else if (num == 3){
+  //   if (this.estudiante.puntuacion >= 100){
+  //     this.modulo_actual = 3;
+  //   }else{
+  //     this._snackBar.open('Para visualizar este módulo se necesita una puntuación de 100 o más','OK'); 
+  //   }     
+  // }
+  // else if (num == 4){
+  //   if (this.estudiante.puntuacion >= 150){
+  //     this.modulo_actual = 4;
+  //   }else{
+  //     this._snackBar.open('Para visualizar este módulo se necesita una puntuación de 150 o más','OK'); 
+  //   }
+  // }
+  // else if (num == 5){
+  //   if (this.estudiante.puntuacion >= 200){
+  //     this.modulo_actual = 5;
+  //   }else{
+  //     this._snackBar.open('Para visualizar este módulo se necesita una puntuación de 200 o más','OK'); 
+  //   }
+  // }
+  // else if (num == 6){
+  //   if (this.estudiante.puntuacion >= 250){
+  //     this.modulo_actual = 6;
+  //   }else{
+  //     this._snackBar.open('Para visualizar este módulo se necesita una puntuación de 250 o más','OK'); 
+  //   }      
+  // }
 }
 ComprobarEvaluacion(num: number){
   var puntaje = 0

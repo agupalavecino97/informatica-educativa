@@ -185,6 +185,8 @@
               </mat-card-content>
             </mat-card>
             <hr>
+            <iframe [src]='url1' frameborder="0" allowfullscreen style="height: 500px;width: 750px;" ></iframe>
+
             <button mat-raised-button color="primary" style="position: absolute;right: 10 px;bottom: 10px;" (click)="irEvaluacion()" style=float:right>
               <mat-icon>edit</mat-icon>
               Ir a la evaluación
@@ -381,12 +383,14 @@
           </mat-card>
           <hr>
           
+          <iframe [src]='url2' frameborder="0" allowfullscreen style="height: 500px;width: 750px;" ></iframe>
+
           <button mat-raised-button color="primary" style="position: absolute;right: 10 px;bottom: 10px;" (click)="irEvaluacion()" style=float:right>
             <mat-icon>edit</mat-icon>
             Ir a la evaluación
           </button>
       </div>
-      <div *ngIf="modulo_actual==3" class="container-page">
+      <div *ngIf="modulo_actual>2" class="container-page">
           <p>En desarrollo</p>
       </div> 
     </mat-sidenav-content>
