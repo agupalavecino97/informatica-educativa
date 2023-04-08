@@ -20,8 +20,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
         
     ) {
         
-        this.url = 'https://informatica-educativa.herokuapp.com/api/estudiantes';
-        // this.url = 'http://localhost:3785/api/estudiantes';
+        // this.url = 'https://informatica-educativa.herokuapp.com/api/estudiantes';
+        this.url = 'http://localhost:3785/api/estudiantes';
     }
 
     obtenerEstudiante(dni: string) {

@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <h1>Estadística Online</h1>
+      <h1>Inglés Online</h1>
       <span class="spacer"></span>
       <div>
         <a mat-button [routerLink]="'/teoria'"> 
@@ -31,18 +31,69 @@
   </mat-toolbar>
 <div class="container-page">
     <mat-card>
-        <mat-card-title>Módulos Teóricos</mat-card-title>
-        <mat-card-subtitle>Aqui podrás encontrar las lecciones de Pronombres y Present Simple, una vez estudiado los temas aquí explicados tendrás que realizar la autoevaluación para poder desbloquear nuevos módulos.</mat-card-subtitle>
+        <mat-card-header>
+            <div mat-card-avatar class="header-image wellcome-img"></div>
+            <mat-card-title> Bienvenido/a </mat-card-title>
+            <mat-card-subtitle>
+                <p> 
+                    En la plataforma podrás encontrar los siguientes módulos
+                </p> 
+            </mat-card-subtitle>    
+        </mat-card-header>
     </mat-card>
     <br>
     <mat-card>
-        <mat-card-title>Módulos AutoEvaluación</mat-card-title>
-        <mat-card-subtitle>Aqui podrás encontrar las evaluaciónes para poder pasar a un nuevo módulo teórico, cada pregunta respondida correctamente sumará 10 puntos, para pasar a un nuevo módulo es necesario acumular 50 puntos en el cuastionario.</mat-card-subtitle>
+        <mat-card-header>
+            <div mat-card-avatar class="header-image teoria-img"></div>
+            <mat-card-title>Módulos Teóricos</mat-card-title>
+            <mat-card-subtitle>
+                <p> 
+                    Aqui podrás encontrar las lecciones de Pronombres y Present Simple, una vez estudiado los temas aquí explicados tendrás que realizar la autoevaluación para poder desbloquear nuevos módulos.
+                </p> 
+            </mat-card-subtitle>    
+        </mat-card-header>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="onClickTeoria()">
+                Ir a teoría 
+                <mat-icon>chevron_right</mat-icon>
+            </button>
+          </mat-card-actions>
     </mat-card>
     <br>
     <mat-card>
-        <mat-card-title>Módulos Perfil</mat-card-title>
-        <mat-card-subtitle>Aqui podrás encontrar tu información personal y tu puntuación.</mat-card-subtitle>
+        <mat-card-header>
+            <div mat-card-avatar class="header-image evaluacion-img"></div>
+            <mat-card-title>Módulos AutoEvaluación</mat-card-title>
+            <mat-card-subtitle>
+                <p> 
+                    Aqui podrás encontrar las evaluaciónes para poder pasar a un nuevo módulo teórico, cada pregunta respondida correctamente sumará 10 puntos, para pasar a un nuevo módulo es necesario acumular 50 puntos en el cuastionario.              
+                </p> 
+            </mat-card-subtitle>    
+        </mat-card-header>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="onClickEvaluacion()">
+                Ir a autoevaluación 
+                <mat-icon>chevron_right</mat-icon>
+            </button>
+          </mat-card-actions>
+    </mat-card>
+    <br>
+    <mat-card>
+        <mat-card-header>
+            <div mat-card-avatar class="header-image perfil-img"></div>
+            <mat-card-title>Módulo Perfil</mat-card-title>
+            <mat-card-subtitle>
+                <p> 
+                    Aqui podrás encontrar tu información personal y tu puntuación.
+                </p> 
+            </mat-card-subtitle>    
+        </mat-card-header>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="onClickPerfil()">
+                Ir a mi perfíl 
+                <mat-icon>chevron_right</mat-icon>
+            </button>
+          </mat-card-actions>
     </mat-card>
     <br>
     <mat-card>

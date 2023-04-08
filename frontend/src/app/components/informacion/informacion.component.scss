@@ -170,3 +170,52 @@
 .mat-list-icon:before{
     vertical-align: middle;
 }
+
+.teoria-img {
+  background-image: url('../../../assets/imgs/book.png');
+}
+
+.evaluacion-img {
+  background-image: url('../../../assets/imgs/exam.png');
+}
+
+.perfil-img {
+  background-image: url('../../../assets/imgs/user.png');
+}
+
+.wellcome-img{
+  background-image: url('../../../assets/imgs/wellcome.png');
+}
+
+.header-image {
+  background-size: cover;
+  width: 10em;
+  height: 10em;
+  // border-radius: 0 !important;
+}
+
+mat-card {
+  padding: 4em;
+  background: #c5cae9;
+  mat-card-header {
+    mat-card-title {
+      font-size: 4em;
+      padding: 0.5em;
+    }
+    p {
+      font-size: 1.7em;
+      padding: 0 1em;
+    }
+  } 
+  mat-card-actions {
+    button {
+      float: right;
+      margin-right: 2em;
+      font-size: 1.8em;
+    }
+  }
+  li {
+    font-size: 2em;
+    margin-top: 0.5em;
+  }
+}

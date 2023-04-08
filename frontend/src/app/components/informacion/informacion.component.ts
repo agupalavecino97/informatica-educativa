@@ -25,6 +25,18 @@ export class InformacionComponent implements OnInit {
     }
   }
 
+  onClickTeoria() {
+    this._router.navigate(['/teoria']);
+  }
+
+  onClickEvaluacion() {
+    this._router.navigate(['/evaluacion']);
+  }
+
+  onClickPerfil() {
+    this._router.navigate(['/perfil']);
+  }
+
   logout(){
     this.estudiante = null;
     this._estudianteService.updateEstudiante(this.estudiante);
