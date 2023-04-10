@@ -24,14 +24,22 @@ const ELEMENT_DATA: any[] = [
 })
 export class TeoriaComponent implements OnInit {
 
-  public estudiante; 
+  public estudiante: Estudiante; 
   public modulo_actual: number;
   displayedColumns: string[] = ['uno', 'dos'];
   dataSource = ELEMENT_DATA;
-
+  public modulos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  public temas = ['Possessive Adjectives', 'Simple Present', 'Simple Present', 'Simple Present', 'Simple Present', 'Simple Present', 'Simple Present', 'Simple Present', 'Simple Present', 'Simple Present']
   url1;
   url2;
-  constructor(private _router: Router,private _estudianteService: EstudianteService, private _snackBar: MatSnackBar, private  _sanitizer: DomSanitizer) { }
+  constructor(
+      private _router: Router,
+      private _estudianteService: EstudianteService, 
+      private _snackBar: MatSnackBar, 
+      private  _sanitizer: DomSanitizer) 
+    {    
+    this.estudiante = new Estudiante();
+  }
 
   ngOnInit(): void {
     this._estudianteService.estudiante.subscribe(
@@ -40,11 +48,12 @@ export class TeoriaComponent implements OnInit {
     if (this.estudiante.nombre == ''){
       this._router.navigate(['/login']);
     }
-    if (this.estudiante.puntuacion <50){
-      this.modulo_actual = 1
-    }else{
-      this.modulo_actual = 2
-    }
+    this.modulo_actual = 0
+    // if (this.estudiante.puntuacion <50){
+    //   this.modulo_actual = 1
+    // }else{
+    //   this.modulo_actual = 2
+    // }
     var url1 = 'https://www.youtube.com/watch?v=faSrNM63k58';
     var results1 = url1.match('[\\?&]v=([^&#]*)');
     var video1 = (results1 === null) ? url1 : results1[1];
@@ -96,6 +105,11 @@ export class TeoriaComponent implements OnInit {
     //   }      
     // }
   }
+
+  onChangeMod(mod: number) {
+    this.modulo_actual = mod;
+  }
+
   irEvaluacion(){
     this._router.navigate(['/evaluacion']);
 
