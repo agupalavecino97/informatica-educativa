@@ -2,3 +2,114 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.teoria-titulo {
+    font-size: 2.6em !important;
+    font-weight: 600 !important;
+} 
+
+.teoria-hr {
+    border-top: 6px solid;
+}
+
+.teoria-subtitle-card {
+    background: #c5cae9;
+
+    .teoria-subtitle-card-img {
+        background-size: cover;
+        width: 10em;
+        height: 10em;
+        background-image: url('./assets/imgs/problem.png');    
+    }
+
+    .teoria-subtitle-card-title {
+        font-size: 2em;
+        margin-top: 0.5em;
+        font-weight: 600 !important;
+    }
+
+    .teoria-subtitle-card-text {
+        font-size: 1.6em;
+        margin: 1em 1em;
+    }
+}
+
+.teoria-card-corto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    left: 40%;
+    background: #303f9f;
+    color: #eee;
+    border-radius: 7%;
+    .teoria-card-corto-title {
+        font-size: 1.4em;
+        font-weight: 600;
+        margin-top: 0.4em;
+    }
+}
+
+.teoria-tabla {
+    background-color: #e8eaf6;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    margin-top: 2em;
+    th.mat-header-cell {
+       text-align: center !important;
+    }
+    td {
+        font-size: 1.6em !important;
+        font-weight: 500;
+        text-align: center;
+    }
+    th {
+        font-size: 1.6em !important;
+        font-weight: 700;
+        text-align: center;
+    }
+}
+
+.teoria-text-grande {
+    font-size: 2em !important;
+    font-weight: 600 !important;
+}
+
+.teoria-card-ejemplos {
+    background: #e8eaf6;
+    align-items: center;
+    text-align: center;
+    .teoria-card-ejemplos-footer {
+        color: #eee;
+        background: #303f9f;
+        height: 2em;
+        font-size: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.alarm-img {
+    background-image: url('./assets/imgs/alarm.png');    
+}
+
+.question-img {
+    background-image: url('./assets/imgs/question-mark.png');    
+}
+
+.teoria-info-card {
+    background: #303f9f;
+    .teoria-info-card-text {
+        color: #eee;
+        display: flex !important;
+        justify-content: center;
+        font-size: 1.6em;
+    }
+}
+
+.btn-volver {
+    margin-bottom: 1em !important;
+    background-color: #c5cae9;
+}

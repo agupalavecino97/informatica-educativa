@@ -31,7 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { InformacionComponent } from './components/informacion/informacion.component';
-
+import { ModuloTeorico1 } from './components/teoria/moduloTeorico1/moduloTeorico1.component';
+import { ModuloTeorico2 } from './components/teoria/moduloTeorico2/moduloTeorico2.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,8 @@ import { InformacionComponent } from './components/informacion/informacion.compo
     EvaluacionComponent,
     PerfilComponent,
     InformacionComponent,
+    ModuloTeorico1,
+    ModuloTeorico2,
   ],
   imports: [
     BrowserModule,

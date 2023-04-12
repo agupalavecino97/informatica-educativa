@@ -1,0 +1,193 @@
+<div class="container">
+   <button mat-raised-button class="btn-volver" (click)="onClickVolver()">
+    <mat-icon>arrow_back</mat-icon>
+    Volver a los módulos 
+  </button>
+    <h1 class="teoria-titulo">Módulo 1. Possessive Adjectives - Adjetivos Posesivos</h1>
+    <hr class="teoria-hr">
+    <mat-card class="teoria-subtitle-card"> 
+      <div class="row">
+        <div class="col-2">
+          <div mat-card-avatar class="teoria-subtitle-card-img"></div>
+        </div>
+        <div class="col-10">
+          <mat-card-header>
+            <mat-card-title class="teoria-subtitle-card-title"> ¿Que es? </mat-card-title>  
+          </mat-card-header>
+          <mat-card-content class="teoria-subtitle-card-text">
+            <p>Se utilizan para indicar a quién pertenece el sujeto u objeto de la oración. Van seguidos de un sustantivo (o una cláusula nominal).</p>        
+          </mat-card-content>    
+        </div>
+      </div>
+    </mat-card>
+    <hr class="teoria-hr"> 
+
+    <mat-card class="teoria-card-corto"> 
+          <mat-card-header>
+            <mat-card-title class="teoria-card-corto-title"> ¿Cuales son? </mat-card-title>  
+          </mat-card-header>
+    </mat-card>
+
+    <table mat-table class="mat-table mat-elevation-z8 teoria-tabla" [dataSource]="dataSource">
+      <ng-container matColumnDef="uno">
+        <th mat-header-cell *matHeaderCellDef> Inglés </th>
+        <td mat-cell *matCellDef="let element"> {{element.uno}} </td>
+      </ng-container>
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="dos">
+        <th mat-header-cell *matHeaderCellDef> Español </th>
+        <td mat-cell *matCellDef="let element"> {{element.dos}} </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+    <br>
+    <hr class="teoria-hr">
+    <mat-card class="teoria-subtitle-card"> 
+      <mat-card-content class="teoria-subtitle-card-text">
+        <p>Como se puede observar, son muchos menos que en español, ya que no se diferencian en singular o plural.</p>        
+      </mat-card-content>    
+    </mat-card>
+
+    <h2 class="teoria-text-grande mt-3">Algunos ejemplos: </h2>
+    <div class="row">
+      <div class="col-6">
+        <mat-card class="teoria-card-ejemplos">
+          <img mat-card-image src="../../../assets/imgs/car.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+          <mat-card-footer class="teoria-card-ejemplos-footer">
+            <p>
+              My car / Mi auto
+            </p>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+      <div class="col-6">
+        <mat-card class="teoria-card-ejemplos">
+          <img mat-card-image src="../../../assets/imgs/book-stack.png" style="max-width: 300px;max-height: 300px;" alt="Photo 2">
+          <mat-card-footer class="teoria-card-ejemplos-footer">
+            <p>
+              My books / Mis libros
+            </p>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+    </div>
+    <hr class="teoria-hr">
+
+    <mat-card class="teoria-subtitle-card"> 
+      <mat-card-content class="teoria-subtitle-card-text">
+        <p>Sin embargo, debes prestar atención cuando se refieren a la tercera persona, ya que en castellano se usa "su" en todos los casos, mientras que en inglés varían según la persona.</p>
+      </mat-card-content>    
+    </mat-card>
+
+
+    <mat-card class="teoria-subtitle-card mt-3"> 
+      <div class="row">
+        <div class="col-2">
+          <img mat-card-image src="../../../../assets/imgs/alarm.png" style="max-width: 70px; max-height: 70px; margin-left: 25px; margin-top: 0px;" alt="Photo 1">
+        </div>
+        <div class="col-10">
+          <mat-card-header>
+            <mat-card-title class="teoria-subtitle-card-title"> Nota: "your" puede referirse al singular (tu) o al plural (vuestro). </mat-card-title>  
+          </mat-card-header>
+        </div>
+      </div>
+    </mat-card>
+    <hr class="teoria-hr">
+    <mat-card class="teoria-info-card" style="width: 40%; left: 30%;"> 
+      <mat-card-content>
+        <mat-list role="list">
+          <mat-list-item role="listitem" class="teoria-info-card-text"> <strong> My </strong> &nbsp; house </mat-list-item>
+          <mat-list-item role="listitem" class="teoria-info-card-text"> <strong> Your </strong> &nbsp;  house </mat-list-item>
+          <mat-list-item role="listitem" class="teoria-info-card-text"> <strong> His </strong> &nbsp; house </mat-list-item>
+          <mat-list-item role="listitem" class="teoria-info-card-text"> <strong> Her </strong> &nbsp; house </mat-list-item>
+          <mat-list-item role="listitem" class="teoria-info-card-text"> <strong> Its </strong> &nbsp; house </mat-list-item>
+          <mat-list-item role="listitem" class="teoria-info-card-text"> <strong> Our </strong> &nbsp; house </mat-list-item>
+          <mat-list-item role="listitem" class="teoria-info-card-text"> <strong> Your </strong> &nbsp; house </mat-list-item>
+          <mat-list-item role="listitem" class="teoria-info-card-text"> <strong> Their </strong> &nbsp; house </mat-list-item>
+        </mat-list>      
+      </mat-card-content>    
+    </mat-card>
+    <hr class="teoria-hr">
+
+    <mat-card class="teoria-info-card" style="width: 70%; left: 15%;"> 
+      <mat-card-content>
+        <mat-list role="list">
+          <mat-list-item role="listitem" class="teoria-info-card-text"> I like &nbsp; <strong> my </strong> &nbsp; job. | Me gusta mi trabajo. </mat-list-item>
+          <mat-list-item role="listitem" class="teoria-info-card-text"> Is &nbsp; <strong> your </strong> &nbsp; brother coming?.  | ¿Viene tu hermano?.</mat-list-item>
+          <mat-list-item role="listitem" class="teoria-info-card-text"> <strong> His </strong> &nbsp;  car is new. |  Su auto (de él) es nuevo. </mat-list-item>
+          <mat-list-item role="listitem" class="teoria-info-card-text"> <strong> Her </strong> &nbsp; house is big. | Su casa (de ella) es grande.</mat-list-item>
+          <mat-list-item role="listitem" class="teoria-info-card-text"> <strong> Our </strong> &nbsp; sons live here. | Nuestros hijos viven aquí.</mat-list-item>
+          <mat-list-item role="listitem" class="teoria-info-card-text"> <strong> Your </strong> &nbsp; house is big. |  Vuestra casa es grande.</mat-list-item>
+          <mat-list-item role="listitem" class="teoria-info-card-text"> <strong> Their </strong> &nbsp; children go to school. | Sus hijos van a la escuela.</mat-list-item>
+        </mat-list>      
+      </mat-card-content>    
+    </mat-card>
+    <hr class="teoria-hr">
+
+    <mat-card class="teoria-subtitle-card"> 
+      <mat-card-content class="teoria-subtitle-card-text">
+        <p>Si se está hablando de una persona y se describe su casa, se usaría his o her, según el sexo de dicha persona.</p>
+      </mat-card-content>    
+    </mat-card>
+
+    <div class="row mt-2">
+      <div class="col-6 offset-3">
+        <mat-card class="teoria-card-ejemplos">
+          <img mat-card-image src="../../../assets/imgs/house.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+          <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 10em; align-items: center; font-size: 1.4em;">
+            <p>
+              John lives in New York. <strong> His </strong> house is very big.
+            </p>
+            <p>
+              John vive en Nueva York. Su casa es muy grande.
+            </p>
+            <br>
+            <p>
+              Susan lives in New York. <strong> Her </strong> house is very big.
+            </p>
+            <p>
+              Susan vive en Nueva York. Su casa es muy grande.
+            </p>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+    </div>
+    
+     <mat-card class="teoria-subtitle-card mt-2"> 
+      <mat-card-content class="teoria-subtitle-card-text">
+        <p>Pero si se habla de un animal se debe utilizar its.</p>
+      </mat-card-content>    
+    </mat-card>
+
+    <div class="row mt-2">
+      <div class="col-6 offset-3">
+        <mat-card class="teoria-card-ejemplos">
+          <img mat-card-image src="../../../assets/imgs/cat.PNG" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+          <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 6em; align-items: center; font-size: 1.4em;">
+            <p>
+              The cat is under the table. <strong> Its </strong> name is Bob.
+           </p>
+           <p>
+             El gato está debajo de la mesa. Su nombre es Bob.
+           </p>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+    </div>
+
+    <hr class="teoria-hr">
+
+    <mat-card class="teoria-subtitle-card mt-2"> 
+      <mat-card-content class="teoria-subtitle-card-text">
+        <p>Ahora puedes ver el siguiente video para reforzar lo aprendido.</p>
+      </mat-card-content>    
+    </mat-card>
+  
+    <iframe [src]='url1' frameborder="0" allowfullscreen style="height: 500px;width: 750px; margin-left: 10em; margin-top: 1em;" ></iframe>
+
+
+</div>
