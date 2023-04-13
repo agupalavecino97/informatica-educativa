@@ -30,7 +30,37 @@ var actualizarEstudiante = (req, res) =>{
     });
 };
 
+var obtenerHistorial = (req, res) => {
+    model.obtenerHistorial((error, result) => {
+        if (error) {
+            res.status(500).send({ message: 'GET Error.' });
+        } else {
+            if (result.data) {
+                res.status(200).send({data: result.data});
+            } else {
+                res.status(200).send(result);
+            }
+        }
+    });
+};
+
+var obtenerHistorialEstudiante = (req, res) =>{
+    model.obtenerHistorialEstudiante(req.params.dni, (error, result) => {
+        if(error){
+            res.status(500).send({ message: 'GET Error.' });
+        }else{
+            if(result.data){
+                res.status(200).send({data: result.data});
+            }else{
+                res.status(200).send(result);
+            }
+        }
+    });
+};
+
 module.exports={
     getEstudiante,
-    actualizarEstudiante
+    actualizarEstudiante,
+    obtenerHistorial,
+    obtenerHistorialEstudiante
 }

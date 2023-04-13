@@ -15,8 +15,7 @@ const ELEMENT_DATA: any[] = [
 
 @Component({
   selector: 'app-moduloTeorico1',
-  templateUrl: './moduloTeorico1.component.html',
-  styleUrls: ['./moduloTeorico1.component.scss']
+  templateUrl: './moduloTeorico1.component.html'
 })
 export class ModuloTeorico1 {
 

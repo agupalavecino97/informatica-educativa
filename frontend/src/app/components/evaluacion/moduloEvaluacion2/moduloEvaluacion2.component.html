@@ -1,67 +1,143 @@
-<!-- <h4>Reescribe las siguientes oraciones en forma negativa. <strong> Respeta las mayúsculas, minúsculas y signos de puntuación. no se aceptan los ' </strong></h4>
-<p>I go to school everyday.</p>
-<input class="form-control" type="text" matInput 
-[(ngModel)]="input7"
-placeholder="Completar" >
-<hr>
-<p>Laura is very tired.</p>
-<input class="form-control" type="text" matInput 
-[(ngModel)]="input8"
-placeholder="Completar" >
-<hr>
-<p>My hobby is collecting stamps.</p>
-<input class="form-control" type="text" matInput 
-[(ngModel)]="input9"
-placeholder="Completar" >
-<hr>
-<p>Hugh has breakfast at seven.</p>
-<input class="form-control" type="text" matInput 
-[(ngModel)]="input10"
-placeholder="Completar" >
-<hr>
-<p>Thomas and Nick play tennis all day.</p>
-<input class="form-control" type="text" matInput 
-[(ngModel)]="input11"
-placeholder="Completar" >
-<hr>
-<p>The plane is full.</p>
-<input class="form-control" type="text" matInput 
-[(ngModel)]="input12"
-placeholder="Completar" >
-<hr>
-<p>I read a lot of books.</p>
-<input class="form-control" type="text" matInput 
-[(ngModel)]="input13"
-placeholder="Completar" >
-<hr>
-<h4>Elige la opción más adecuada para responder a las siguientes preguntas.</h4>
-<p>Do you live in London?</p>
-<mat-radio-group [(ngModel)]="radio1" style="position: absolute;" aria-label="Seleccione una opción">
-    <mat-radio-button [value]="1">Yes, I do</mat-radio-button>
-    <mat-radio-button [value]="2">Yes, I am.</mat-radio-button>
-</mat-radio-group> 
-<br>
-<hr>
-<p>Does she usually go to the cinema?</p>
-<mat-radio-group [(ngModel)]="radio2" style="position: absolute;" aria-label="Seleccione una opción">
-    <mat-radio-button [value]="1">Yes, she does.</mat-radio-button>
-    <mat-radio-button [value]="2">Yes, she do.</mat-radio-button>
-</mat-radio-group>
-<br>
-<hr>
-<p>Where do you live?</p>
-<mat-radio-group [(ngModel)]="radio3" style="position: absolute;" aria-label="Seleccione una opción">
-    <mat-radio-button [value]="1">I live in Manchester.</mat-radio-button>
-    <mat-radio-button [value]="2">Yes, I do.</mat-radio-button>
-</mat-radio-group>
-<br>
-<hr>
-<p>Does he always get up at seven?</p>
-<mat-radio-group [(ngModel)]="radio4"style="position: absolute;" aria-label="Seleccione una opción">
-    <mat-radio-button [value]="1">Yes, he do.</mat-radio-button>
-    <mat-radio-button [value]="2">Yes, he does.</mat-radio-button>
-</mat-radio-group>
-<button mat-raised-button color="accent" (click)="ComprobarEvaluacion(2)" style="position: absolute;right: 10px;bottom: 10px;">
-    <mat-icon>edit</mat-icon>
-    Verificar
-</button> -->
+<div class="container">
+    <button mat-raised-button class="btn-volver" (click)="onClickVolver()">
+        <mat-icon>arrow_back</mat-icon>
+        Volver a los módulos 
+    </button>
+    <h1 class="evaluacion-subtitulo">Reescribe las siguientes oraciones en forma negativa.</h1>
+
+    <mat-card class="evaluacion-card">
+        <mat-card-content class="evaluacion-card-content">
+            <img mat-card-image src="../../../../assets/imgs/back-to-school.png" class="evaluacion-card-img" alt="Photo 1">
+            <div style="margin-right: 4em;">
+                <p>I go to school everyday.</p>
+                <input class="form-control" type="text" matInput 
+                [(ngModel)]="input7"
+                placeholder="Completar" >
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="evaluacion-card mt-2">
+        <mat-card-content class="evaluacion-card-content">
+            <img mat-card-image src="../../../../assets/imgs/tired.png" class="evaluacion-card-img" alt="Photo 1">
+            <div style="margin-right: 4em;">
+                <p>Laura is very tired.</p>
+                <input class="form-control" type="text" matInput 
+                [(ngModel)]="input8"
+                placeholder="Completar" >
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="evaluacion-card mt-2">
+        <mat-card-content class="evaluacion-card-content">
+            <img mat-card-image src="../../../../assets/imgs/post-stamp.png" class="evaluacion-card-img" alt="Photo 1">
+            <div style="margin-right: 4em;">
+                <p>My hobby is collecting stamps.</p>
+                <input class="form-control" type="text" matInput 
+                [(ngModel)]="input9"
+                placeholder="Completar" >
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="evaluacion-card mt-2">
+        <mat-card-content class="evaluacion-card-content">
+            <img mat-card-image src="../../../../assets/imgs/breakfast.png" class="evaluacion-card-img" alt="Photo 1">
+            <div style="margin-right: 4em;">
+                <p>Hugh has breakfast at seven.</p>
+                <input class="form-control" type="text" matInput 
+                [(ngModel)]="input10"
+                placeholder="Completar" >
+            </div>
+        </mat-card-content>
+    </mat-card>
+    
+    <mat-card class="evaluacion-card mt-2">
+        <mat-card-content class="evaluacion-card-content">
+            <img mat-card-image src="../../../../assets/imgs/tennis.png" class="evaluacion-card-img" alt="Photo 1">
+            <div style="margin-right: 4em;">
+                <p>Thomas and Nick play tennis all day.</p>
+                <input class="form-control" type="text" matInput 
+                [(ngModel)]="input11"
+                placeholder="Completar" >
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="evaluacion-card mt-2">
+        <mat-card-content class="evaluacion-card-content">
+            <img mat-card-image src="../../../../assets/imgs/plane.png" class="evaluacion-card-img" alt="Photo 1">
+            <div style="margin-right: 4em;">
+                <p>The plane is full.</p>
+                <input class="form-control" type="text" matInput 
+                [(ngModel)]="input12"
+                placeholder="Completar" >
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="evaluacion-card mt-2">
+        <mat-card-content class="evaluacion-card-content">
+            <img mat-card-image src="../../../../assets/imgs/book-stack.png" class="evaluacion-card-img" alt="Photo 1">
+            <div style="margin-right: 4em;">
+                <p>I read a lot of books.</p>
+                <input class="form-control" type="text" matInput 
+                [(ngModel)]="input13"
+                placeholder="Completar" >
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <hr class="teoria-hr">
+    <h1 class="evaluacion-subtitulo">Elige la opción más adecuada para responder a las siguientes preguntas.</h1>
+  
+    <mat-card class="evaluacion-card-radio">
+        <mat-card-content class="evaluacion-card-radio-content">
+            <p>Do you live in London?</p>
+            <mat-radio-group [(ngModel)]="radio1" style="position: absolute;" aria-label="Seleccione una opción">
+                <mat-radio-button [value]="1">Yes, I do</mat-radio-button>
+                <mat-radio-button [value]="2">Yes, I am.</mat-radio-button>
+            </mat-radio-group> 
+        </mat-card-content>
+    </mat-card>
+    <hr class="teoria-hr">
+    <mat-card class="evaluacion-card-radio">
+        <mat-card-content class="evaluacion-card-radio-content">
+            <p>Does she usually go to the cinema?</p>
+            <mat-radio-group [(ngModel)]="radio2" style="position: absolute;" aria-label="Seleccione una opción">
+                <mat-radio-button [value]="1">Yes, she does.</mat-radio-button>
+                <mat-radio-button [value]="2">Yes, she do.</mat-radio-button>
+            </mat-radio-group>
+        </mat-card-content>
+    </mat-card>
+    <hr class="teoria-hr">
+    <mat-card class="evaluacion-card-radio">
+        <mat-card-content class="evaluacion-card-radio-content">
+            <p>Where do you live?</p>
+            <mat-radio-group [(ngModel)]="radio3" style="position: absolute;" aria-label="Seleccione una opción">
+                <mat-radio-button [value]="1">I live in Manchester.</mat-radio-button>
+                <mat-radio-button [value]="2">Yes, I do.</mat-radio-button>
+            </mat-radio-group>
+        </mat-card-content>
+    </mat-card>
+    <hr class="teoria-hr">
+    <mat-card class="evaluacion-card-radio">
+        <mat-card-content class="evaluacion-card-radio-content">
+            <p>Does he always get up at seven?</p>
+            <mat-radio-group [(ngModel)]="radio4"style="position: absolute;" aria-label="Seleccione una opción">
+                <mat-radio-button [value]="1">Yes, he do.</mat-radio-button>
+                <mat-radio-button [value]="2">Yes, he does.</mat-radio-button>
+            </mat-radio-group>
+        </mat-card-content>
+    </mat-card>
+    <hr class="teoria-hr">
+
+    <button mat-raised-button color="primary" style="position: fixed;right: 10px;bottom: 10px;" (click)="ComprobarEvaluacion()">
+        <mat-icon>edit</mat-icon>
+        Comprobar evaluación
+    </button>
+
+</div>
+
+

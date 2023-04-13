@@ -70,4 +70,40 @@ model.actualizarEstudiante = function(data, callback){
 	}
 }
 
+
+model.obtenerHistorial = function(callback){	
+	if(connection){	
+        var select = 'SELECT historial.*, estudiante.* ' + 
+        'FROM historial as historial '
+        'JOIN estudiantes as estudiante ON estudiante.dni = historial.dni'
+        connection.query(select, function(error, result) {
+            if(error) {   
+                throw error;
+                callback(null, {"messagge": 'ERROR actualizacion.'});
+            }
+            else{	
+                callback(null, {data: result});                
+            }
+        });
+	}
+}
+
+model.obtenerHistorialEstudiante = function(dni, callback){	
+	if(connection){	
+        var select = 'SELECT historial.*, estudiante.* ' + 
+        'FROM historial as historial '
+        'JOIN estudiantes as estudiante ON estudiante.dni = historial.dni '
+        'WHERE historail.dni = ' + dni;
+        connection.query(select, function(error, result) {
+            if(error) {   
+                throw error;
+                callback(null, {"messagge": 'ERROR actualizacion.'});
+            }
+            else{	
+                callback(null, {data: result});                
+            }
+        });
+	}
+}
+
 module.exports = model;

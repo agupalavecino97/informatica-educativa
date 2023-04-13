@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Estudiante } from 'src/app/models/estudiante.model';
-import { EstudianteService } from 'src/app/services/estudiante.service';
 
 export interface Datos {
    estudiante: Estudiante,
@@ -32,9 +31,7 @@ export class ModuloEvaluacion1 {
   public radio8: string;
   public respuestas = [];
 
-  constructor(private _estudianteService: EstudianteService) {     
-
-   }
+  constructor() {     }
 
    onClickVolver() {
       this.volver.emit(true);
@@ -84,8 +81,8 @@ export class ModuloEvaluacion1 {
          incorrectas += 1;
          this.respuestas.push( 'You work with'+ this.input5 +' hands - Incorrecta  ')
       }
-      if (this.input6 === 'they'){
-         this.respuestas.push( 'They glasses are black - Correcta  ')
+      if (this.input6 === 'gis'){
+         this.respuestas.push( 'His glasses are black - Correcta  ')
          puntaje += 10;
          correctas += 1;
       }else{

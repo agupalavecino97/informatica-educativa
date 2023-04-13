@@ -136,3 +136,25 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         justify-content: space-around;    
     }
 }
+
+
+.evaluacion-card {
+    background: #e8eaf6;
+    width: 50%;
+    left: 25%;
+    height: 9em;
+    .evaluacion-card-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-size: 1.4em;
+        font-weight: 600;
+    }
+    .evaluacion-card-img {
+        max-width: 6em;
+        max-height: 6em;
+        border-radius: 40% !important;
+        margin-top: -12px !important;
+        margin-left: -30px;
+    }
+}
