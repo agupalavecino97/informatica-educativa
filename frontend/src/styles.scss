@@ -113,3 +113,26 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin-bottom: 1em !important;
     background-color: #c5cae9;
 }
+
+.evaluacion-subtitulo {
+    font-size: 1.6em !important;
+    font-weight: 600 !important;
+} 
+
+
+.evaluacion-card-radio {
+    background: #e8eaf6;
+    // align-items: center;
+    // text-align: center;
+    width: 50%;
+    left: 25%;
+    height: 6em;
+    .evaluacion-card-radio-content {
+        font-size: 1.4em;
+        font-weight: 600;
+    }
+    .evaluacion-card-radio-radios {
+        display: flex;
+        justify-content: space-around;    
+    }
+}

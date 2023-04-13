@@ -3,6 +3,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Estudiante } from '../models/estudiante.model';
 import { map } from 'rxjs/operators';
 import { BehaviorSubject, Observable } from 'rxjs';
+
+export interface Datos {
+    estudiante: Estudiante,
+    correctas: number,
+    incorrectas: number,
+    codigoEvaluacion: number,
+} 
+
 @Injectable() export class EstudianteService {
     public url: string;
     private _estudiante: BehaviorSubject<Estudiante> = new BehaviorSubject<Estudiante>(new Estudiante());
@@ -43,11 +51,11 @@ import { BehaviorSubject, Observable } from 'rxjs';
         this._estudiante.next(Object.assign({}, this.dataStore).estudiante);
     }
 
-    actualizarEstudiante(estudiante: Estudiante) {
-        let params = JSON.stringify(estudiante); //Parsea el objeto json en un srtring 
+    actualizarEstudiante(datos: Datos) {
+        let params = JSON.stringify({estudiante: datos.estudiante, correctas: datos.correctas, incorrectas: datos.incorrectas, codigoEvaluacion: datos.codigoEvaluacion}); //Parsea el objeto json en un srtring 
         return this._http.post(this.url + '/actualizar', params, this.httpOptions)
             .pipe(map(res =>{
-                this.dataStore.estudiante = estudiante;
+                this.dataStore.estudiante = datos.estudiante;
                 this._estudiante.next(Object.assign({}, this.dataStore).estudiante);
                 return JSON.parse(JSON.stringify(res))
             } ));

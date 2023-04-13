@@ -31,18 +31,40 @@ model.getEstudiante = function(dni, callback){
 
 model.actualizarEstudiante = function(data, callback){	
 	if(connection){	
-        console.log(data);
         var actualizacion = 'UPDATE estudiantes SET ' + 
-        'puntuacion = ' + connection.escape(data.puntuacion) +
-        ' WHERE dni = ' + connection.escape(data.dni);
+        'puntuacion = ' + connection.escape(data.estudiante.puntuacion) +
+        ' WHERE dni = ' + connection.escape(data.estudiante.dni);
         // console.log(actualizacion);
         connection.query(actualizacion, function(error, result) {
             if(error) {   
                 throw error;
                 callback(null, {"error": 'ERROR actualizacion.'});
             }
-            else{		
-                callback(null, {"message": "Actualizado Correctamente"});
+            else{	
+                let d = new Date();
+                let date = d.getDate() + '-' + d.getMonth() + '-' + d.getFullYear() + ' - ' +d.getHours() + ':' + d.getMinutes() ;  
+                var insert =
+                "INSERT INTO historial (dni, fecha, correctas, incorrectas, codigoEvaluacion) " +
+                "VALUES ( '" +
+                data.estudiante.dni +
+                "', '" +
+                date +
+                "', '" +
+                data.correctas +
+                "', '" +
+                data.incorrectas +
+                "', '" +
+                data.codigoEvaluacion +
+                "');";
+                connection.query(insert, function (error, result_inert) {
+                    if (error) {
+                        throw error;
+                        callback(null, { "error": "ERROR INSERT." });
+                    } else {
+                        callback(null, {"message": "Actualizado Correctamente"});                
+                    }
+                });
+
             }
         });
 	}

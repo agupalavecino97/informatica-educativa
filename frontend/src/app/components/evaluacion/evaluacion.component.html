@@ -24,405 +24,45 @@
               Salir 
         </a>
       </div>
-    </mat-toolbar-row>
-    <mat-toolbar-row style="background: #5c6bc0;height: 40px;">
-        <h1>Módulo de AutoEvaluación </h1>
-      </mat-toolbar-row>
-  </mat-toolbar>
-  <mat-sidenav-container>
-    <mat-sidenav style="background: #3f51b5;" mode="side" opened [disableClose]="true" >
-      <mat-nav-list>
-        <mat-list-item  (click)="verEvaluacion(1)">
-            <span style="color: #FFF;" (click)="verEvaluacion(1)">Evaluación 1</span>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(1)" *ngIf="modulo_actual == 1">edit</mat-icon>
-        </mat-list-item>
-        
-        <div class="dropdown-divider"></div>
-  
-        <mat-list-item  (click)="verEvaluacion(2)">
-            <span style="color: #FFF;" (click)="verEvaluacion(2)">Evaluación 2</span>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(2)" *ngIf="modulo_actual == 2">edit</mat-icon>
-        </mat-list-item>
-
-        <div class="dropdown-divider"></div>
-
-        <mat-list-item  (click)="verEvaluacion(3)">
-            <span style="color: #FFF;" (click)="verEvaluacion(3)">Evaluación 3</span>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(3)" *ngIf="modulo_actual == 3">edit</mat-icon>
-        </mat-list-item>
-
-        <div class="dropdown-divider"></div>
-
-        <mat-list-item  (click)="verEvaluacion(4)">
-            <span style="color: #FFF;" (click)="verEvaluacion(4)">Evaluación 4</span>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(4)" *ngIf="modulo_actual == 4">edit</mat-icon>
-        </mat-list-item>
-
-        <div class="dropdown-divider"></div>
-
-        <mat-list-item  (click)="verEvaluacion(5)">
-            <span style="color: #FFF;" (click)="verEvaluacion(5)">Evaluación 5</span>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(5)" *ngIf="modulo_actual == 5">edit</mat-icon>
-        </mat-list-item>
-
-        <div class="dropdown-divider"></div>
-
-        <mat-list-item  (click)="verEvaluacion(6)">
-            <span style="color: #FFF;" (click)="verEvaluacion(6)">Evaluación 6</span>
-            <mat-icon style="color: #FFF;" mat-list-icon (click)="verEvaluacion(6)" *ngIf="modulo_actual == 6">edit</mat-icon>
-        </mat-list-item>
-      </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <div class="container-page" *ngIf="modulo_actual == 1">
-            <h2>Completa los recuadros con los adjetivos posesivos correctos.</h2>
-            <mat-card class="example-card">
-                <img mat-card-image src="../../../assets/imgs/5.jpg" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
-                <mat-card-content>
-                  <p>
-                    Maria lives in a flat. This is  <mat-form-field>
-                        <input class="form-control" type="text" matInput 
-                        [(ngModel)]="input1"
-                        placeholder="Completar" >
-                    </mat-form-field> flat.
-                  </p>
-                </mat-card-content>
-              </mat-card>
-            <hr>
-            <mat-card class="example-card">
-                <img mat-card-image src="../../../assets/imgs/6.jpg" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
-                <mat-card-content>
-                  <p>
-                    Today it's <mat-form-field>
-                        <input class="form-control" type="text" matInput 
-                        [(ngModel)]="input2"
-                        placeholder="Completar" >
-                    </mat-form-field> birthday.
-                  </p>
-                </mat-card-content>
-            </mat-card>
-            <hr>
-            <mat-card class="example-card">
-                <img mat-card-image src="../../../assets/imgs/7.jpg" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
-                <mat-card-content>
-                  <p>
-                    Paul dances with  <mat-form-field>
-                        <input class="form-control" type="text" matInput 
-                        [(ngModel)]="input3"
-                        placeholder="Completar" >
-                    </mat-form-field> girlfriend.
-                  </p>
-                </mat-card-content>
-            </mat-card>
-            <hr>
-            <mat-card class="example-card">
-                <img mat-card-image src="../../../assets/imgs/8.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
-                <mat-card-content>
-                  <p>
-                    We have a son. This is  <mat-form-field>
-                        <input class="form-control" type="text" matInput 
-                        [(ngModel)]="input4"
-                        placeholder="Completar" >
-                    </mat-form-field> son.
-                  </p>
-                </mat-card-content>
-            </mat-card>
-            <hr>
-            <mat-card class="example-card">
-                <img mat-card-image src="../../../assets/imgs/9.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
-                <mat-card-content>
-                  <p>
-                    You work with  <mat-form-field>
-                        <input class="form-control" type="text" matInput 
-                        [(ngModel)]="input5"
-                        placeholder="Completar" >
-                    </mat-form-field> hands.
-                  </p>
-                </mat-card-content>
-            </mat-card>
-            <hr>
-            <mat-card class="example-card">
-                <img mat-card-image src="../../../assets/imgs/10.jpg" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
-                <mat-card-content>
-                  <p>
-                    <mat-form-field>
-                        <input class="form-control" type="text" matInput 
-                        [(ngModel)]="input6"
-                        placeholder="Completar" >
-                    </mat-form-field> glasses are black.
-                  </p>
-                </mat-card-content>
-            </mat-card>
-            <hr>
-            <h4>Elige la opción más adecuada para responder a las siguientes preguntas.</h4>
-            <p>Are you married?</p>
-            <mat-radio-group [(ngModel)]="radio5" style="position: absolute;" aria-label="Seleccione una opción">
-                <mat-radio-button [value]="1">Yes, I do</mat-radio-button>
-                <mat-radio-button [value]="2">Yes, I am.</mat-radio-button>
-            </mat-radio-group> 
-            <br>
-            <hr>
-            <p>Do you have any brothers or sisters?</p>
-            <mat-radio-group [(ngModel)]="radio6" style="position: absolute;" aria-label="Seleccione una opción">
-                <mat-radio-button [value]="1">I have two sons.</mat-radio-button>
-                <mat-radio-button [value]="2">I have two brothers.</mat-radio-button>
-            </mat-radio-group> 
-            <br>
-            <hr>
-            <p>Is he your nephew?</p>
-            <mat-radio-group [(ngModel)]="radio7" style="position: absolute;" aria-label="Seleccione una opción">
-                <mat-radio-button [value]="1">No, he isn't.</mat-radio-button>
-                <mat-radio-button [value]="2">No, he don't.</mat-radio-button>
-            </mat-radio-group> 
-            <br>
-            <hr>
-            <p>What does your wife do?</p>
-            <mat-radio-group [(ngModel)]="radio8" style="position: absolute;" aria-label="Seleccione una opción">
-                <mat-radio-button [value]="1">She's a housewife.</mat-radio-button>
-                <mat-radio-button [value]="2">Yes, she is.</mat-radio-button>
-            </mat-radio-group> 
-            <br>
-            <hr>
-            <button mat-raised-button color="accent" (click)="ComprobarEvaluacion(1)" style="position: absolute;right: 10px;bottom: 10px;">
-                <mat-icon>edit</mat-icon>
-                Verificar
-            </button>
-            <!-- <mat-list>
-                <div mat-subheader>Pregunta 1</div>
-                <mat-list-item>  
-                    <div mat-line>
-                        
-                    </div>
-                    <br>
-                </mat-list-item>
-                <mat-divider></mat-divider>
-                <div mat-subheader>Pregunta 2</div>
-                <div mat-subheader>Complete el campo faltante</div>
-                <mat-list-item> 
-                    <div mat-line>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            <mat-form-field>
-                                <input class="form-control" type="text" matInput 
-                                placeholder="Completar" >
-                            </mat-form-field>
-                            Nisi velit quam natus? Fuga ullam similique pariatur iusto sit
-                        </p>
-                    </div>
-                </mat-list-item>
-                <mat-divider></mat-divider>
-                <div mat-subheader>Pregunta 3</div>
-                <div mat-subheader>Verdadero y Falso</div>
-                <mat-list-item>  
-                    <div mat-line>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident nobis accusantium nostrum beatae rerum laborum ut, optio culpa molestias magni aspernatur quos, atque a iusto quam quod mollitia unde.</p>
-                    </div>
-                    <br>
-                    <div mat-line>
-                        <mat-radio-group style="position: absolute;" aria-label="Seleccione una opción">
-                            <mat-radio-button value="1">Verdadero</mat-radio-button>
-                            <mat-radio-button value="2">Falso</mat-radio-button>
-                        </mat-radio-group>    
-                    </div>
-                </mat-list-item>
-                <mat-divider></mat-divider>
-                <div mat-subheader>Pregunta 4</div>
-                <div mat-subheader>Multiple Choice</div>
-                <mat-list-item>  
-                    <div mat-line>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident nobis accusantium nostrum beatae rerum laborum ut, optio culpa molestias magni aspernatur quos, atque a iusto quam quod mollitia unde.</p>
-                    </div>
-                    <br>
-                    <div mat-line>
-                        <mat-radio-group style="position: absolute;" aria-label="Seleccione una opción">
-                            <mat-radio-button value="1">choice 1</mat-radio-button>
-                            <mat-radio-button value="2">choice 2</mat-radio-button>
-                            <mat-radio-button value="3">choice 3</mat-radio-button>
-                            <mat-radio-button value="4">choice 4</mat-radio-button>
-                        </mat-radio-group>    
-                    </div>
-                </mat-list-item>
-                <mat-divider></mat-divider>
-                <div mat-subheader>Pregunta 5</div>
-                <div mat-subheader>Verdadero y Falso</div>
-                <mat-list-item>  
-                    <div mat-line>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident nobis accusantium nostrum beatae rerum laborum ut, optio culpa molestias magni aspernatur quos, atque a iusto quam quod mollitia unde.</p>
-                    </div>
-                    <br>
-                    <div mat-line>
-                        <mat-radio-group style="position: absolute;" aria-label="Seleccione una opción">
-                            <mat-radio-button value="1">Verdadero</mat-radio-button>
-                            <mat-radio-button value="2">Falso</mat-radio-button>
-                        </mat-radio-group>    
-                    </div>
-                </mat-list-item>
-                <mat-divider></mat-divider>
-                <div mat-subheader>Pregunta 6</div>
-                <div mat-subheader>Complete el campo faltante</div>
-                <mat-list-item> 
-                    <div mat-line>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            <mat-form-field>
-                                <input class="form-control" type="text" matInput 
-                                placeholder="Completar" >
-                            </mat-form-field>
-                            Nisi velit quam natus? Fuga ullam similique pariatur iusto sit
-                        </p>
-                    </div>
-                </mat-list-item>
-                <mat-divider></mat-divider>
-                <div mat-subheader>Pregunta 7</div>
-                <div mat-subheader>Multiple Choice</div>
-                <mat-list-item>  
-                    <div mat-line>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident nobis accusantium nostrum beatae rerum laborum ut, optio culpa molestias magni aspernatur quos, atque a iusto quam quod mollitia unde.</p>
-                    </div>
-                    <br>
-                    <div mat-line>
-                        <mat-radio-group style="position: absolute;" aria-label="Seleccione una opción">
-                            <mat-radio-button value="1">choice 1</mat-radio-button>
-                            <mat-radio-button value="2">choice 2</mat-radio-button>
-                            <mat-radio-button value="3">choice 3</mat-radio-button>
-                            <mat-radio-button value="4">choice 4</mat-radio-button>
-                        </mat-radio-group>    
-                    </div>
-                </mat-list-item>
-                <div mat-subheader>Pregunta 8</div>
-                <div mat-subheader>Complete el campo faltante</div>
-                <mat-list-item> 
-                    <div mat-line>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            <mat-form-field>
-                                <input class="form-control" type="text" matInput 
-                                placeholder="Completar" >
-                            </mat-form-field>
-                            Nisi velit quam natus? Fuga ullam similique pariatur iusto sit
-                        </p>
-                    </div>
-                </mat-list-item>
-                <mat-divider></mat-divider>
-                <mat-divider></mat-divider>
-                <div mat-subheader>Pregunta 9</div>
-                <div mat-subheader>Verdadero y Falso</div>
-                <mat-list-item>  
-                    <div mat-line>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident nobis accusantium nostrum beatae rerum laborum ut, optio culpa molestias magni aspernatur quos, atque a iusto quam quod mollitia unde.</p>
-                    </div>
-                    <br>
-                    <div mat-line>
-                        <mat-radio-group style="position: absolute;" aria-label="Seleccione una opción">
-                            <mat-radio-button value="1">Verdadero</mat-radio-button>
-                            <mat-radio-button value="2">Falso</mat-radio-button>
-                        </mat-radio-group>    
-                    </div>
-                </mat-list-item>
-                <mat-divider></mat-divider>
-                <div mat-subheader>Pregunta 10</div>
-                <div mat-subheader>Multiple Choice</div>
-                <mat-list-item>  
-                    <div mat-line>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident nobis accusantium nostrum beatae rerum laborum ut, optio culpa molestias magni aspernatur quos, atque a iusto quam quod mollitia unde.</p>
-                    </div>
-                    <br>
-                    <div mat-line>
-                        <mat-radio-group style="position: absolute;" aria-label="Seleccione una opción">
-                            <mat-radio-button value="1">choice 1</mat-radio-button>
-                            <mat-radio-button value="2">choice 2</mat-radio-button>
-                            <mat-radio-button value="3">choice 3</mat-radio-button>
-                            <mat-radio-button value="4">choice 4</mat-radio-button>
-                        </mat-radio-group>    
-                    </div>
-                </mat-list-item>
-            </mat-list> -->
+        </mat-toolbar-row>
+        <mat-toolbar-row style="background: #5c6bc0;height: 40px;">
+            <h1>Módulo de AutoEvaluación </h1>
+        </mat-toolbar-row>
+    </mat-toolbar>
+  <div class="container">
+    <div class="row" *ngIf="modulo_actual == 0">
+        <div *ngFor="let mod of modulos" class="col-4">
+          <mat-card class="modulo-evaliacion">
+            <mat-card-header>
+                <mat-card-title> Evaluación {{mod}} </mat-card-title>
+                <mat-card-subtitle> {{temas[mod - 1]}}</mat-card-subtitle>
+                <button mat-raised-button (click)="onChangeMod(mod)" > Ver  <mat-icon>chevron_right</mat-icon> </button>    
+            </mat-card-header>
+        </mat-card>
         </div>
-        <div class="container-page" *ngIf="modulo_actual == 2">
-            <h4>Reescribe las siguientes oraciones en forma negativa. <strong> Respeta las mayúsculas, minúsculas y signos de puntuación. no se aceptan los ' </strong></h4>
-            <p>I go to school everyday.</p>
-            <input class="form-control" type="text" matInput 
-            [(ngModel)]="input7"
-            placeholder="Completar" >
-            <hr>
-            <p>Laura is very tired.</p>
-            <input class="form-control" type="text" matInput 
-            [(ngModel)]="input8"
-            placeholder="Completar" >
-            <hr>
-            <p>My hobby is collecting stamps.</p>
-            <input class="form-control" type="text" matInput 
-            [(ngModel)]="input9"
-            placeholder="Completar" >
-            <hr>
-            <p>Hugh has breakfast at seven.</p>
-            <input class="form-control" type="text" matInput 
-            [(ngModel)]="input10"
-            placeholder="Completar" >
-            <hr>
-            <p>Thomas and Nick play tennis all day.</p>
-            <input class="form-control" type="text" matInput 
-            [(ngModel)]="input11"
-            placeholder="Completar" >
-            <hr>
-            <p>The plane is full.</p>
-            <input class="form-control" type="text" matInput 
-            [(ngModel)]="input12"
-            placeholder="Completar" >
-            <hr>
-            <p>I read a lot of books.</p>
-            <input class="form-control" type="text" matInput 
-            [(ngModel)]="input13"
-            placeholder="Completar" >
-            <hr>
-            <h4>Elige la opción más adecuada para responder a las siguientes preguntas.</h4>
-            <p>Do you live in London?</p>
-            <mat-radio-group [(ngModel)]="radio1" style="position: absolute;" aria-label="Seleccione una opción">
-                <mat-radio-button [value]="1">Yes, I do</mat-radio-button>
-                <mat-radio-button [value]="2">Yes, I am.</mat-radio-button>
-            </mat-radio-group> 
-            <br>
-            <hr>
-            <p>Does she usually go to the cinema?</p>
-            <mat-radio-group [(ngModel)]="radio2" style="position: absolute;" aria-label="Seleccione una opción">
-                <mat-radio-button [value]="1">Yes, she does.</mat-radio-button>
-                <mat-radio-button [value]="2">Yes, she do.</mat-radio-button>
-            </mat-radio-group>
-            <br>
-            <hr>
-            <p>Where do you live?</p>
-            <mat-radio-group [(ngModel)]="radio3" style="position: absolute;" aria-label="Seleccione una opción">
-                <mat-radio-button [value]="1">I live in Manchester.</mat-radio-button>
-                <mat-radio-button [value]="2">Yes, I do.</mat-radio-button>
-            </mat-radio-group>
-            <br>
-            <hr>
-            <p>Does he always get up at seven?</p>
-            <mat-radio-group [(ngModel)]="radio4"style="position: absolute;" aria-label="Seleccione una opción">
-                <mat-radio-button [value]="1">Yes, he do.</mat-radio-button>
-                <mat-radio-button [value]="2">Yes, he does.</mat-radio-button>
-            </mat-radio-group>
-            <button mat-raised-button color="accent" (click)="ComprobarEvaluacion(2)" style="position: absolute;right: 10px;bottom: 10px;">
-                <mat-icon>edit</mat-icon>
-                Verificar
-            </button>
-        </div>
-        <div *ngIf="modulo_actual>2" class="container-page">
-            <p>En desarrollo</p>
-        </div> 
-        <div class="container page" *ngIf="revision">
-            <div class="container-page">
-                <h3>Revisión</h3>
-                <ul>
-                    <li *ngFor="let item of respuestas"> {{item}} </li>
-                </ul>
-            </div>
-            <button mat-raised-button color="accent" (click)="irPerfil()" style="position: absolute;right: 10px;bottom: 10px;">
-                <mat-icon>edit</mat-icon>
-                OK
-            </button>
-        </div>
+    </div>
+    <div class="container-page" *ngIf="modulo_actual == 1">
+        <app-moduloEvaluacion1 
+            [estudiante]="estudiante"
+            (actualizarEstudiante)="actualizarEstudiante($event)"
+            (volver)="volver()"
+        > </app-moduloEvaluacion1>
+    </div>
+    <div class="container-page" *ngIf="modulo_actual == 2">
+        <app-moduloEvaluacion2 (volver)="volver()"> </app-moduloEvaluacion2>
+    </div>
 
-        
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+    <div class="container page" *ngIf="revision">
+      <div class="container-page">
+          <h3>Revisión</h3>
+          <ul>
+              <li *ngFor="let item of respuestas"> {{item}} </li>
+          </ul>
+      </div>
+      <button mat-raised-button color="accent" (click)="irPerfil()" style="position: absolute;right: 10px;bottom: 10px;">
+          <mat-icon>edit</mat-icon>
+          OK
+      </button>
+    </div>
+
+  </div>

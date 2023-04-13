@@ -33,6 +33,8 @@ import { FormsModule } from '@angular/forms';
 import { InformacionComponent } from './components/informacion/informacion.component';
 import { ModuloTeorico1 } from './components/teoria/moduloTeorico1/moduloTeorico1.component';
 import { ModuloTeorico2 } from './components/teoria/moduloTeorico2/moduloTeorico2.component';
+import { ModuloEvaluacion1 } from './components/evaluacion/moduloEvaluacion1/moduloEvaluacion1.component';
+import { ModuloEvaluacion2 } from './components/evaluacion/moduloEvaluacion2/moduloEvaluacion2.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +45,8 @@ import { ModuloTeorico2 } from './components/teoria/moduloTeorico2/moduloTeorico
     InformacionComponent,
     ModuloTeorico1,
     ModuloTeorico2,
+    ModuloEvaluacion1,
+    ModuloEvaluacion2
   ],
   imports: [
     BrowserModule,

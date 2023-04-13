@@ -1,0 +1,166 @@
+<div class="container">
+    <button mat-raised-button class="btn-volver" (click)="onClickVolver()">
+        <mat-icon>arrow_back</mat-icon>
+        Volver a los módulos 
+    </button>
+    <h1 class="evaluacion-subtitulo">Completa los recuadros con los adjetivos posesivos correctos</h1>
+
+    <div class="row mt-2">
+        <div class="col-6">
+            <mat-card class="teoria-card-ejemplos">
+                <img mat-card-image src="../../../../assets/imgs/5.jpg" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+                <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+                    <p>
+                        Maria lives in a flat. This is  
+                        
+                        <mat-form-field>
+                            <input class="form-control" type="text" matInput 
+                            [(ngModel)]="input1"
+                            placeholder="Completar" >
+                        </mat-form-field> 
+                        
+                        flat.
+                    </p>
+                </mat-card-footer>
+            </mat-card>
+        </div>
+        <div class="col-6">
+            <mat-card class="teoria-card-ejemplos">
+            <img mat-card-image src="../../../../assets/imgs/6.jpg" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+            <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+                <p>
+                    Today it's   
+                    
+                    <mat-form-field>
+                        <input class="form-control" type="text" matInput 
+                        [(ngModel)]="input2"
+                        placeholder="Completar" >
+                    </mat-form-field> 
+                    
+                    birthday.
+                </p>
+            </mat-card-footer>
+            </mat-card>
+        </div>
+        <div class="col-6">
+          <mat-card class="teoria-card-ejemplos">
+            <img mat-card-image src="../../../../assets/imgs/7.jpg" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+            <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+                <p>
+                    Paul dances with 
+                    
+                    <mat-form-field>
+                        <input class="form-control" type="text" matInput 
+                        [(ngModel)]="input3"
+                        placeholder="Completar" >
+                    </mat-form-field> 
+                    
+                    girlfriend.
+                </p>
+            </mat-card-footer>
+          </mat-card>
+        </div>
+        <div class="col-6">
+          <mat-card class="teoria-card-ejemplos">
+            <img mat-card-image src="../../../../assets/imgs/8.jpg" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+            <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+                <p>
+                    We have a son. This is 
+                    
+                    <mat-form-field>
+                        <input class="form-control" type="text" matInput 
+                        [(ngModel)]="input4"
+                        placeholder="Completar" >
+                    </mat-form-field> 
+                    
+                    son.
+                </p>
+            </mat-card-footer>
+          </mat-card>
+        </div>
+        <div class="col-6">
+          <mat-card class="teoria-card-ejemplos">
+            <img mat-card-image src="../../../../assets/imgs/9.jpg" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+            <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+                <p>
+                    You work with
+                    
+                    <mat-form-field>
+                        <input class="form-control" type="text" matInput 
+                        [(ngModel)]="input5"
+                        placeholder="Completar" >
+                    </mat-form-field> 
+                    
+                    hands.
+                </p>
+            </mat-card-footer>
+          </mat-card>
+        </div>
+        <div class="col-6">
+          <mat-card class="teoria-card-ejemplos">
+            <img mat-card-image src="../../../../assets/imgs/10.jpg" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+            <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+                <p>
+                  
+                    <mat-form-field>
+                        <input class="form-control" type="text" matInput 
+                        [(ngModel)]="input6"
+                        placeholder="Completar" >
+                    </mat-form-field> 
+                    
+                    glasses are black.
+                </p>
+            </mat-card-footer>
+          </mat-card>
+        </div>
+    </div>
+    <hr class="teoria-hr">
+    <h1 class="evaluacion-subtitulo">Elige la opción más adecuada para responder a las siguientes preguntas.</h1>
+  
+    <mat-card class="evaluacion-card-radio">
+        <mat-card-content class="evaluacion-card-radio-content">
+            <p><strong>  Are you married? </strong></p>
+            <mat-radio-group [(ngModel)]="radio5" aria-label="Seleccione una opción" class="evaluacion-card-radio-radios">
+                <mat-radio-button [value]="1">Yes, I do</mat-radio-button>
+                <mat-radio-button [value]="2">Yes, I am.</mat-radio-button>
+            </mat-radio-group>
+        </mat-card-content>
+    </mat-card>
+    <hr class="teoria-hr">
+    <mat-card class="evaluacion-card-radio">
+        <mat-card-content class="evaluacion-card-radio-content">
+            <p><strong> Do you have any brothers or sisters? </strong></p>
+            <mat-radio-group [(ngModel)]="radio6" aria-label="Seleccione una opción" class="evaluacion-card-radio-radios">
+                <mat-radio-button [value]="1">I have two sons.</mat-radio-button>
+                <mat-radio-button [value]="2">I have two brothers.</mat-radio-button>
+            </mat-radio-group> 
+        </mat-card-content>
+    </mat-card>
+    <hr class="teoria-hr">
+    <mat-card class="evaluacion-card-radio">
+        <mat-card-content class="evaluacion-card-radio-content">
+            <p><strong> Is he your nephew? </strong></p>
+            <mat-radio-group [(ngModel)]="radio7" aria-label="Seleccione una opción" class="evaluacion-card-radio-radios">
+                <mat-radio-button [value]="1">No, he isn't.</mat-radio-button>
+                <mat-radio-button [value]="2">No, he don't.</mat-radio-button>
+            </mat-radio-group> 
+        </mat-card-content>
+    </mat-card>
+    <hr class="teoria-hr">
+    <mat-card class="evaluacion-card-radio">
+        <mat-card-content class="evaluacion-card-radio-content">
+            <p><strong>  What does your wife do? </strong></p>
+            <mat-radio-group [(ngModel)]="radio8" aria-label="Seleccione una opción" class="evaluacion-card-radio-radios">
+                <mat-radio-button [value]="1">She's a housewife.</mat-radio-button>
+                <mat-radio-button [value]="2">Yes, she is.</mat-radio-button>
+            </mat-radio-group> 
+        </mat-card-content>
+    </mat-card>
+    <hr class="teoria-hr">
+
+    <button mat-raised-button color="primary" style="position: fixed;right: 10px;bottom: 10px;" (click)="ComprobarEvaluacion()">
+        <mat-icon>edit</mat-icon>
+        Comprobar evaluación
+    </button>
+
+</div>
