@@ -12,6 +12,7 @@ export interface Datos {
   correctas: number,
   incorrectas: number,
   codigoEvaluacion: number,
+  respuestas: Array<string>
 } 
 @Component({
   selector: 'app-evaluacion',
@@ -82,13 +83,13 @@ onChangeMod(mod: number) {
 
 actualizarEstudiante(datos: Datos) {
   datos.codigoEvaluacion = this.modulo_actual;
+  this.respuestas = datos.respuestas;
   this._estudianteService.actualizarEstudiante(datos).subscribe(
       response =>{
         if (response.message){ 
           this._snackBar.open(response.message, 'Ok'); 
           this.revision = true;
           this.modulo_actual = 0;
-          // this._router.navigate(['/perfil']);
         }else{
           response.message
         this._snackBar.open('Error','OK'); 
@@ -107,7 +108,9 @@ actualizarEstudiante(datos: Datos) {
   }
 
   volver() {
+   this.revision = false;
    this.modulo_actual = 0;
+   this.respuestas = [];
    }
 
 }

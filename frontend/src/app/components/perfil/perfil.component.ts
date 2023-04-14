@@ -17,8 +17,8 @@ export class PerfilComponent implements OnInit {
   ngOnInit(): void {
     this._estudianteService.estudiante.subscribe(
       data => {
-        console.log(data);
-        this.estudiante = data;}
+        this.estudiante = data;
+      }
     )
     // this.estudiante = JSON.parse(localStorage.getItem('estudiante'));
     if (this.estudiante.nombre == ''){

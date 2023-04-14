@@ -6,6 +6,7 @@ export interface Datos {
   correctas: number;
   incorrectas: number;
   codigoEvaluacion: number;
+  respuestas: Array<string>
 }
 
 @Component({
@@ -43,88 +44,85 @@ export class ModuloEvaluacion2 {
     let incorrectas = 0;
     if (this.input7 === 'I dont go to school everyday') {
       this.respuestas.push(
-        'I go to school everyday - I dont go to school everyday - Correcta  '
+        'I dont go to school everyday - Correcta  '
       );
       puntaje += 10;
       correctas += 1;
     } else {
       this.respuestas.push(
-        'I go to school everyday -' + this.input7 + '- Incorrecta  '
+        this.input7 + '- Incorrecta  '
       );
       incorrectas += 1;
     }
     if (this.input8 === 'Laura isnt very tired') {
       this.respuestas.push(
-        'Laura is very tired - Laura isnt very tired - Correcta  '
+        'Laura isnt very tired - Correcta  '
       );
       puntaje += 10;
       correctas += 1;
     } else {
       incorrectas += 1;
       this.respuestas.push(
-        'Laura is very tired -' + this.input8 + '- Incorrecta  '
+        this.input8 + '- Incorrecta  '
       );
     }
     if (this.input9 === 'My hobby isnt collecting stamps') {
       this.respuestas.push(
-        'My hobby is collecting stamps - My hobby isnt collecting stamps - Correcta  '
+        'My hobby isnt collecting stamps - Correcta  '
       );
       puntaje += 10;
       correctas += 1;
     } else {
       incorrectas += 1;
       this.respuestas.push(
-        'My hobby is collecting stamps - ' + this.input9 + '- Incorrecta  '
+        this.input9 + '- Incorrecta  '
       );
     }
     if (this.input10 === 'Hugh doesnt have breakfast at seven') {
       this.respuestas.push(
-        'Hugh has breakfast at seven - Hugh doesnt have breakfast at seven - Correcta  '
+        'Hugh doesnt have breakfast at seven - Correcta  '
       );
       puntaje += 10;
       correctas += 1;
     } else {
       incorrectas += 1;
       this.respuestas.push(
-        'Hugh has breakfast at seven - ' + this.input10 + '- Incorrecta  '
+        this.input10 + '- Incorrecta  '
       );
     }
     if (this.input11 === 'Thomas and Nick dont play tennis all day') {
       this.respuestas.push(
-        'Thomas and Nick play tennis all day - Thomas and Nick dont play tennis all day - Correcta  '
+        'Thomas and Nick dont play tennis all day - Correcta  '
       );
       correctas += 1;
       puntaje += 10;
     } else {
       incorrectas += 1;
-      this.respuestas.push(
-        'Thomas and Nick play tennis all day -' +
-          this.input11 +
-          '- Incorrecta  '
+      this.respuestas.push( this.input11 + '- Incorrecta  '
       );
     }
     if (this.input12 === 'The plane isnt full') {
       this.respuestas.push(
-        'The plane is full - The plane isnt full - Correcta  '
+        'The plane isnt full - Correcta  '
       );
       correctas += 1;
       puntaje += 10;
     } else {
       incorrectas += 1;
       this.respuestas.push(
-        'The plane is full -' + this.input12 + ' - Incorrecta  '
+        this.input12 + ' - Incorrecta  '
       );
     }
     if (this.input13 === 'I dont read a lot of books') {
       this.respuestas.push(
-        'I read a lot of books - I dont read a lot of books - Correcta  '
+        'I dont read a lot of books - Correcta  '
       );
       correctas += 1;
       puntaje += 10;
     } else {
       incorrectas += 1;
       this.respuestas.push(
-        'I read a lot of books - ' + this.input13 + ' - Incorrecta  '
+        this.input13 + ' - Incorrecta  '
       );
     }
     if (this.radio1 == '1') {
@@ -136,15 +134,13 @@ export class ModuloEvaluacion2 {
       this.respuestas.push('Do you live in London? Yes, I am - Incorrecta  ');
     }
     if (this.radio2 == '2') {
-      this.respuestas.push(
-        'Does she usually go to the cinema? Yes, she do. - Correcta  '
-      );
+      this.respuestas.push( 'Does she usually go to the cinema? Yes, she do - Correcta  ');
       correctas += 1;
       puntaje += 10;
     } else {
       incorrectas += 1;
       this.respuestas.push(
-        'Does she usually go to the cinema? Yes, she does. - Incorrecta  '
+        'Does she usually go to the cinema? Yes, she does - Incorrecta  '
       );
     }
     if (this.radio3 == '1') {
@@ -176,6 +172,7 @@ export class ModuloEvaluacion2 {
       correctas: correctas,
       incorrectas: incorrectas,
       codigoEvaluacion: 0,
+      respuestas: this.respuestas
     });
   }
 }

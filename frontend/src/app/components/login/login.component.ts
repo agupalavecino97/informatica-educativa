@@ -20,15 +20,17 @@ export class LoginComponent implements OnInit {
 
   
   login(){ 
-      // console.log(this.dni_ingresado)
       this._estudianteService.obtenerEstudiante(this.dni_ingresado).subscribe(
         response =>{
-          console.log(response)
           if (response.message){
             this._snackBar.open('dni inválido','OK');
             this.dni_ingresado = null;
           }else{
-            this._router.navigate(['/informacion']);
+            if (this.dni_ingresado === '0') {
+              this._router.navigate(['/historial']);
+            } else {
+              this._router.navigate(['/informacion']);
+            }
           }
       });
   }  

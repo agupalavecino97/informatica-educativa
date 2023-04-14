@@ -11,9 +11,8 @@ model.getEstudiante = function(dni, callback){
     {  
         var select_estudiante = 
         'SELECT estudiante.* '+   
-        'FROM estudiantes as  estudiante '+
-        'WHERE estudiante.dni = ' + connection.escape(dni) ;  
- 
+        'FROM estudiantes as estudiante '+
+        'WHERE estudiante.dni = ' + connection.escape(dni);  
 		connection.query(select_estudiante, function(error, result_select) {
 			if(error){
                 callback(null, {"message":error});
@@ -34,7 +33,6 @@ model.actualizarEstudiante = function(data, callback){
         var actualizacion = 'UPDATE estudiantes SET ' + 
         'puntuacion = ' + connection.escape(data.estudiante.puntuacion) +
         ' WHERE dni = ' + connection.escape(data.estudiante.dni);
-        // console.log(actualizacion);
         connection.query(actualizacion, function(error, result) {
             if(error) {   
                 throw error;
@@ -74,7 +72,7 @@ model.actualizarEstudiante = function(data, callback){
 model.obtenerHistorial = function(callback){	
 	if(connection){	
         var select = 'SELECT historial.*, estudiante.* ' + 
-        'FROM historial as historial '
+        'FROM historial as historial ' +
         'JOIN estudiantes as estudiante ON estudiante.dni = historial.dni'
         connection.query(select, function(error, result) {
             if(error) {   
@@ -91,8 +89,8 @@ model.obtenerHistorial = function(callback){
 model.obtenerHistorialEstudiante = function(dni, callback){	
 	if(connection){	
         var select = 'SELECT historial.*, estudiante.* ' + 
-        'FROM historial as historial '
-        'JOIN estudiantes as estudiante ON estudiante.dni = historial.dni '
+        'FROM historial as historial ' +
+        'JOIN estudiantes as estudiante ON estudiante.dni = historial.dni ' +
         'WHERE historail.dni = ' + dni;
         connection.query(select, function(error, result) {
             if(error) {   

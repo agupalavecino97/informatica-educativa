@@ -158,3 +158,33 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         margin-left: -30px;
     }
 }
+
+.resultado-card {
+    margin: 2em 2em;
+    background: #e8eaf6;
+
+    .resultado-table {
+        width: 100% !important;
+    }
+}
+
+.resultado-chip-correcto {
+    background-color: #a5d6a7 !important;
+    border-color: #1b5e20 !important;
+    color: #1b5e20 !important;
+}
+.resultado-chip-incorrecto {
+    background-color: #ef9a9a !important;
+    border-color: #f44336 !important;
+    color: #f44336 !important;
+}
+
+.actividad-header {
+    font-size: 1.4em;
+    font-weight: 300;
+}
+
+.teaching-img {
+    width: 50px;
+    height: 50px;
+}

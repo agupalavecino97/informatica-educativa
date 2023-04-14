@@ -33,12 +33,11 @@ export interface Datos {
     }
 
     obtenerEstudiante(dni: string) {
-        return this._http.get(this.url +'/'+dni, this.httpOptions)
+        return this._http.get(this.url +'/obtenerDatos/'+dni, this.httpOptions)
         .pipe(map(res => {
             let response = JSON.parse(JSON.stringify(res))
             this.dataStore.estudiante = response;
             this._estudiante.next(Object.assign({}, this.dataStore).estudiante);
-            console.log(this._estudiante);
             return response
             }));
     }
@@ -61,6 +60,12 @@ export interface Datos {
             } ));
     }
 
+    obtenerHistorial() {
+        return this._http.get(this.url + '/historial', this.httpOptions)
+            .pipe(map(res =>{
+                return JSON.parse(JSON.stringify(res))
+            } ));
+    }
 
 
 

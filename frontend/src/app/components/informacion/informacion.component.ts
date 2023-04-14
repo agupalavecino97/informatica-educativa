@@ -17,7 +17,6 @@ export class InformacionComponent implements OnInit {
   ngOnInit(): void {
     this._estudianteService.estudiante.subscribe(
       data => {
-        console.log(data);
         this.estudiante = data;}
     )
     if (this.estudiante.nombre == ''){

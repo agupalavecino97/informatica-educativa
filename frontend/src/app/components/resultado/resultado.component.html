@@ -1,0 +1,39 @@
+<div class="container">
+    <mat-card class="resultado-card">
+        <mat-card-header>
+          <mat-card-title>Mis respuestas </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 resultado-table">
+
+                <ng-container matColumnDef="nro">
+                  <th mat-header-cell *matHeaderCellDef> # </th>
+                  <td mat-cell *matCellDef="let element"> {{element.index}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="respuesta">
+                  <th mat-header-cell *matHeaderCellDef> Respuesta </th>
+                  <td mat-cell *matCellDef="let element"> {{element.respuesta}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="resultado">
+                  <th mat-header-cell *matHeaderCellDef> Resultado </th>
+                  <td mat-cell *matCellDef="let element"> {{element.resultado}} </td>
+                </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns; "></tr>
+            </table>
+        </mat-card-content>
+        <mat-chip-list  aria-label="Fish selection" style="float: right;">
+          <mat-chip class="resultado-chip-incorrecto"> <mat-icon>thumb_down</mat-icon> {{cantidadIncorrectas}} Respuetas Incorrectas</mat-chip>
+          <mat-chip class="resultado-chip-correcto"> <mat-icon>thumb_up</mat-icon> {{cantidadCorrectas}} Respuetas Correctas</mat-chip>           
+        </mat-chip-list >
+      </mat-card>
+    <button mat-raised-button color="primary" (click)="onClickVolver()" style="position: fixed; right: 3em; bottom: 1em;">
+        <mat-icon>chevron_right</mat-icon>
+        OK
+    </button>
+</div>
+    
+  

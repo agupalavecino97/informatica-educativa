@@ -1,0 +1,38 @@
+<mat-toolbar color="primary" *ngIf="estudiante.dni != null">
+    <mat-toolbar-row>
+      <h1>English Soft</h1>
+      <span class="spacer"></span>
+      <div *ngIf="estudiante.dni != 0">
+        <a mat-button [routerLink]="'/teoria'"> 
+            <mat-icon>menu_book</mat-icon>
+            Teoría
+        </a>
+        <a mat-button [routerLink]="'/evaluacion'"> 
+            <mat-icon>edit</mat-icon>
+            AutoEvaluación 
+        </a>
+        <a mat-button [routerLink]="'/perfil'"> 
+          <mat-icon>person</mat-icon>
+            Perfil 
+        </a>
+        <a mat-button [routerLink]="'/informacion'"> 
+            <mat-icon>info</mat-icon>
+              Información 
+        </a>
+        <a mat-button (click)="logout()"> 
+            <mat-icon>exit_to_app</mat-icon>
+              Salir 
+        </a>
+      </div>
+      <div *ngIf="estudiante.dni == 0">
+        <a mat-button [routerLink]="'/resultados'"> 
+            <mat-icon>analytics</mat-icon>
+            Resultados
+        </a>
+        <a mat-button (click)="logout()"> 
+            <mat-icon>exit_to_app</mat-icon>
+              Salir 
+        </a>
+      </div>
+    </mat-toolbar-row>
+</mat-toolbar>

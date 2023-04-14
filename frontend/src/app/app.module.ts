@@ -23,6 +23,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { EstudianteService } from './services/estudiante.service'
 import { AppRoutingModule } from './app-routing.module';
@@ -35,6 +37,9 @@ import { ModuloTeorico1 } from './components/teoria/moduloTeorico1/moduloTeorico
 import { ModuloTeorico2 } from './components/teoria/moduloTeorico2/moduloTeorico2.component';
 import { ModuloEvaluacion1 } from './components/evaluacion/moduloEvaluacion1/moduloEvaluacion1.component';
 import { ModuloEvaluacion2 } from './components/evaluacion/moduloEvaluacion2/moduloEvaluacion2.component';
+import { ResultadoComponent } from './components/resultado/resultado.component';
+import { HistorialComponent } from './components/historial/historial.component';
+import { NavBarComponent } from './components/navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +51,10 @@ import { ModuloEvaluacion2 } from './components/evaluacion/moduloEvaluacion2/mod
     ModuloTeorico1,
     ModuloTeorico2,
     ModuloEvaluacion1,
-    ModuloEvaluacion2
+    ModuloEvaluacion2,
+    ResultadoComponent,
+    HistorialComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,7 +79,9 @@ import { ModuloEvaluacion2 } from './components/evaluacion/moduloEvaluacion2/mod
     MatSelectModule,
     MatTableModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatChipsModule,
+    MatProgressSpinnerModule,
   ],
   providers: [EstudianteService],
   bootstrap: [AppComponent]

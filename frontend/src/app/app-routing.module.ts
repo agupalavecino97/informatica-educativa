@@ -5,6 +5,7 @@ import { LoginComponent } from './components/login/login.component';
 import { EvaluacionComponent } from './components/evaluacion/evaluacion.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { InformacionComponent } from './components/informacion/informacion.component';
+import { HistorialComponent } from './components/historial/historial.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'evaluacion', component: EvaluacionComponent},
   { path: 'perfil', component: PerfilComponent},
   { path: 'informacion', component: InformacionComponent},
+  { path: 'historial', component: HistorialComponent},
   
   // { path: ':company_name', component: HomePageModule},
   

@@ -1,36 +1,10 @@
-<mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <h1>English Soft</h1>
-      <span class="spacer"></span>
-      <div>
-        <a mat-button [routerLink]="'/teoria'"> 
-            <mat-icon>menu_book</mat-icon>
-            Teoría
-        </a>
-        <a mat-button [routerLink]="'/evaluacion'"> 
-            <mat-icon>edit</mat-icon>
-            AutoEvaluación 
-        </a>
-        <a mat-button [routerLink]="'/perfil'"> 
-          <mat-icon>person</mat-icon>
-            Perfil 
-        </a>
-        <a mat-button [routerLink]="'/informacion'"> 
-            <mat-icon>info</mat-icon>
-              Información 
-        </a>
-        <a mat-button (click)="logout()"> 
-            <mat-icon>exit_to_app</mat-icon>
-              Salir 
-        </a>
-      </div>
-        </mat-toolbar-row>
-        <mat-toolbar-row style="background: #5c6bc0;height: 40px;">
-            <h1>Módulo de AutoEvaluación </h1>
-        </mat-toolbar-row>
-    </mat-toolbar>
+<mat-toolbar>
+  <mat-toolbar-row style="background: #5c6bc0;height: 40px;">
+    <h1>Módulo de AutoEvaluación </h1>
+  </mat-toolbar-row>
+</mat-toolbar>
   <div class="container">
-    <div class="row" *ngIf="modulo_actual == 0">
+    <div class="row" *ngIf="modulo_actual == 0 && !revision">
         <div *ngFor="let mod of modulos" class="col-4">
           <mat-card class="modulo-evaliacion">
             <mat-card-header>
@@ -41,28 +15,27 @@
         </mat-card>
         </div>
     </div>
-    <div class="container-page" *ngIf="modulo_actual == 1">
+    <div class="container-page" *ngIf="modulo_actual == 1 && !revision">
         <app-moduloEvaluacion1 
             [estudiante]="estudiante"
             (actualizarEstudiante)="actualizarEstudiante($event)"
             (volver)="volver()"
         > </app-moduloEvaluacion1>
     </div>
-    <div class="container-page" *ngIf="modulo_actual == 2">
-        <app-moduloEvaluacion2 (volver)="volver()"> </app-moduloEvaluacion2>
+    <div class="container-page" *ngIf="modulo_actual == 2 && !revision">
+        <app-moduloEvaluacion2 
+        [estudiante]="estudiante"
+        (actualizarEstudiante)="actualizarEstudiante($event)"
+        (volver)="volver()"
+        > </app-moduloEvaluacion2>
     </div>
 
     <div class="container page" *ngIf="revision">
-      <div class="container-page">
-          <h3>Revisión</h3>
-          <ul>
-              <li *ngFor="let item of respuestas"> {{item}} </li>
-          </ul>
-      </div>
-      <button mat-raised-button color="accent" (click)="irPerfil()" style="position: absolute;right: 10px;bottom: 10px;">
-          <mat-icon>edit</mat-icon>
-          OK
-      </button>
+      <app-resultado
+        [respuestas]="respuestas"
+        (volver)="volver()"
+        >
+      </app-resultado>
     </div>
   
   </div>
