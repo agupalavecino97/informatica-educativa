@@ -38,6 +38,7 @@ import { ModuloTeorico2 } from './components/teoria/moduloTeorico2/moduloTeorico
 import { ModuloTeorico3 } from './components/teoria/moduloTeorico3/moduloTeorico3.component';
 import { ModuloEvaluacion1 } from './components/evaluacion/moduloEvaluacion1/moduloEvaluacion1.component';
 import { ModuloEvaluacion2 } from './components/evaluacion/moduloEvaluacion2/moduloEvaluacion2.component';
+import { ModuloEvaluacion3 } from './components/evaluacion/moduloEvaluacion3/moduloEvaluacion3.component';
 import { ResultadoComponent } from './components/resultado/resultado.component';
 import { HistorialComponent } from './components/historial/historial.component';
 import { NavBarComponent } from './components/navbar/navbar.component';
@@ -54,6 +55,7 @@ import { NavBarComponent } from './components/navbar/navbar.component';
     ModuloTeorico3,
     ModuloEvaluacion1,
     ModuloEvaluacion2,
+    ModuloEvaluacion3,
     ResultadoComponent,
     HistorialComponent,
     NavBarComponent,

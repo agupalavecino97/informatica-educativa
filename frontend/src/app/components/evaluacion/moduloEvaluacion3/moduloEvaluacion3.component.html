@@ -1,0 +1,218 @@
+<div class="container">
+    <button mat-raised-button class="btn-volver" (click)="onClickVolver()">
+        <mat-icon>arrow_back</mat-icon>
+        Volver a los módulos 
+    </button>
+    <h1 class="evaluacion-subtitulo">Escribe las palabras en el orden correcto.</h1>
+    
+    <span class="actividad-header"> Actividad 1 </span>
+    <mat-card class="evaluacion-card">
+        <mat-card-content class="evaluacion-card-content">
+            <img mat-card-image src="../../../../assets/imgs/football.png" class="evaluacion-card-img" alt="Photo 1">
+            <div style="margin-right: 4em;">
+                <p>football / not / playing / now / They / are</p>
+                <input class="form-control" type="text" matInput 
+                [(ngModel)]="input1"
+                placeholder="Completar" >
+            </div>
+        </mat-card-content>
+    </mat-card>
+    
+    <span class="actividad-header"> Actividad 2 </span>
+    <mat-card class="evaluacion-card mt-2">
+        <mat-card-content class="evaluacion-card-content">
+            <img mat-card-image src="../../../../assets/imgs/house.png" class="evaluacion-card-img" alt="Photo 1">
+            <div style="margin-right: 4em;">
+                <p>house / We / a / looking for / currently / are / new</p>
+                <input class="form-control" type="text" matInput 
+                [(ngModel)]="input2"
+                placeholder="Completar" >
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <span class="actividad-header"> Actividad 3 </span>
+    <mat-card class="evaluacion-card mt-2">
+        <mat-card-content class="evaluacion-card-content">
+            <img mat-card-image src="../../../../assets/imgs/ticket.png" class="evaluacion-card-img" alt="Photo 1">
+            <div style="margin-right: 4em;">
+                <p>the / ? / game / going / you / Are / to</p>
+                <input class="form-control" type="text" matInput 
+                [(ngModel)]="input3"
+                placeholder="Completar" >
+            </div>
+        </mat-card-content>
+    </mat-card>
+    
+    <span class="actividad-header"> Actividad 4 </span>
+    <mat-card class="evaluacion-card mt-2">
+        <mat-card-content class="evaluacion-card-content">
+            <img mat-card-image src="../../../../assets/imgs/book.png" class="evaluacion-card-img" alt="Photo 1">
+            <div style="margin-right: 4em;">
+                <p>moment / the / doing / I / homework / my / at / am / I</p>
+                <input class="form-control" type="text" matInput 
+                [(ngModel)]="input4"
+                placeholder="Completar" >
+            </div>
+        </mat-card-content>
+    </mat-card>
+    
+    <span class="actividad-header"> Actividad 5 </span>
+    <mat-card class="evaluacion-card mt-2">
+        <mat-card-content class="evaluacion-card-content">
+            <img mat-card-image src="../../../../assets/imgs/guitar.png" class="evaluacion-card-img" alt="Photo 1">
+            <div style="margin-right: 4em;">
+                <p>playing / Is / guitar / he / ? / the / now.</p>
+                <input class="form-control" type="text" matInput 
+                [(ngModel)]="input5"
+                placeholder="Completar" >
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <span class="actividad-header"> Actividad 6 </span>
+    <mat-card class="evaluacion-card mt-2">
+        <mat-card-content class="evaluacion-card-content">
+            <img mat-card-image src="../../../../assets/imgs/watch.png" class="evaluacion-card-img" alt="Photo 1">
+            <div style="margin-right: 4em;">
+                <p>watching / raining / they / is / television / are / It / so</p>
+                <input class="form-control" type="text" matInput 
+                [(ngModel)]="input6"
+                placeholder="Completar" >
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <hr class="teoria-hr">
+
+    <div class="row mt-2">
+        <div class="col-6">
+            <span class="actividad-header"> Actividad 7 </span>
+            <mat-card class="teoria-card-ejemplos">
+                <img mat-card-image src="../../../../assets/imgs/hardworking.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+                <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+                    <p>
+                        I  
+                        <mat-form-field>
+                            <input class="form-control" type="text" matInput 
+                            [(ngModel)]="input7"
+                            placeholder="Completar" >
+                        </mat-form-field> 
+                        (work) now.
+                    </p>
+                </mat-card-footer>
+            </mat-card>
+        </div>
+        <div class="col-6">
+            <span class="actividad-header"> Actividad 8 </span>
+            <mat-card class="teoria-card-ejemplos">
+                <img mat-card-image src="../../../../assets/imgs/tv-watching.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+                <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+                    <p>
+                        Nell 
+                        <mat-form-field>
+                            <input class="form-control" type="text" matInput 
+                            [(ngModel)]="input8"
+                            placeholder="Completar" >
+                        </mat-form-field> 
+                        (not/watch) television at the moment.
+                    </p>
+                </mat-card-footer>
+            </mat-card>
+        </div>
+        <div class="col-6">
+            <span class="actividad-header"> Actividad 9 </span>
+            <mat-card class="teoria-card-ejemplos">
+                <img mat-card-image src="../../../../assets/imgs/cinema.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+                <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+                    <p>
+                        They
+                        <mat-form-field>
+                            <input class="form-control" type="text" matInput 
+                            [(ngModel)]="input9"
+                            placeholder="Completar" >
+                        </mat-form-field> 
+                        (go) to the cinema.
+                    </p>
+                </mat-card-footer>
+            </mat-card>
+        </div>
+        <div class="col-6">
+            <span class="actividad-header"> Actividad 10 </span>
+            <mat-card class="teoria-card-ejemplos">
+                <img mat-card-image src="../../../../assets/imgs/newspaper.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+                <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+                    <p>
+                        John
+                        <mat-form-field>
+                            <input class="form-control" type="text" matInput 
+                            [(ngModel)]="input10"
+                            placeholder="Completar" >
+                        </mat-form-field> 
+                        (read) the newspaper.
+                    </p>
+                </mat-card-footer>
+            </mat-card>
+        </div>
+        <div class="col-6">
+            <span class="actividad-header"> Actividad 11 </span>
+            <mat-card class="teoria-card-ejemplos">
+                <img mat-card-image src="../../../../assets/imgs/console.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+                <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+                    <p>
+                        We
+                        <mat-form-field>
+                            <input class="form-control" type="text" matInput 
+                            [(ngModel)]="input11"
+                            placeholder="Completar" >
+                        </mat-form-field> 
+                        (not/play) video games.
+                    </p>
+                </mat-card-footer>
+            </mat-card>
+        </div>
+        <div class="col-6">
+            <span class="actividad-header"> Actividad 12 </span>
+            <mat-card class="teoria-card-ejemplos">
+                <img mat-card-image src="../../../../assets/imgs/drink-water.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+                <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+                    <p>
+                        I
+                        <mat-form-field>
+                            <input class="form-control" type="text" matInput 
+                            [(ngModel)]="input12"
+                            placeholder="Completar" >
+                        </mat-form-field> 
+                        (not/drink) water.
+                    </p>
+                </mat-card-footer>
+            </mat-card>
+        </div>
+        <div class="col-6">
+            <span class="actividad-header"> Actividad 13 </span>
+            <mat-card class="teoria-card-ejemplos">
+                <img mat-card-image src="../../../../assets/imgs/girl.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+                <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+                    <p>
+                        We 
+                        <mat-form-field>
+                            <input class="form-control" type="text" matInput 
+                            [(ngModel)]="input13"
+                            placeholder="Completar" >
+                        </mat-form-field> 
+                        (know) her.
+                    </p>
+                </mat-card-footer>
+            </mat-card>
+        </div>
+    </div>
+    <hr class="teoria-hr">
+
+    <button mat-raised-button color="primary" style="position: fixed;right: 10px;bottom: 10px;" (click)="ComprobarEvaluacion()">
+        <mat-icon>edit</mat-icon>
+        Comprobar evaluación
+    </button>
+
+</div>
+
+

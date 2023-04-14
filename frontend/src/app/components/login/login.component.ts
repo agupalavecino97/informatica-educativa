@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
             if (this.dni_ingresado === '0') {
               this._router.navigate(['/historial']);
             } else {
-              this._router.navigate(['/informacion']);
+              this._router.navigate(['/bienvenido']);
             }
           }
       });

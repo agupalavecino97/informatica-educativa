@@ -1,6 +1,6 @@
 <mat-toolbar color="primary" *ngIf="estudiante.dni != null">
     <mat-toolbar-row>
-      <h1>English Soft</h1>
+      <h1 [routerLink]="'/bienvenido'" style="cursor: pointer">English Soft</h1>
       <span class="spacer"></span>
       <div *ngIf="estudiante.dni != 0">
         <a mat-button [routerLink]="'/teoria'"> 
@@ -15,10 +15,10 @@
           <mat-icon>person</mat-icon>
             Perfil 
         </a>
-        <a mat-button [routerLink]="'/informacion'"> 
-            <mat-icon>info</mat-icon>
-              Información 
-        </a>
+          <!-- <a mat-button [routerLink]="'/informacion'"> 
+              <mat-icon>info</mat-icon>
+                Información 
+          </a> -->
         <a mat-button (click)="logout()"> 
             <mat-icon>exit_to_app</mat-icon>
               Salir 
