@@ -29,7 +29,7 @@ export interface Datos {
     ) {
         
         // this.url = 'https://informatica-educativa.herokuapp.com/api/estudiantes';
-        this.url = 'https://informatica-educativa-back.vercel.app/api/estudiantes';
+        this.url = 'https://informatica-educativa.onrender.com/api/estudiantes';
         // this.url = 'http://localhost:3785/api/estudiantes';
     }
 

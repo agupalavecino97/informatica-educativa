@@ -23,8 +23,10 @@
       <div *ngIf="modulo_actual==2" class="container-page">
         <app-moduloTeorico2 (volver)="volver()"> </app-moduloTeorico2>
       </div>
-
-      <div *ngIf="modulo_actual>2" class="container-page">
+      <div *ngIf="modulo_actual==3" class="container-page">
+        <app-moduloTeorico3 (volver)="volver()"> </app-moduloTeorico3>
+      </div>
+      <div *ngIf="modulo_actual>3" class="container-page">
           <p>En desarrollo</p>
       </div>
         

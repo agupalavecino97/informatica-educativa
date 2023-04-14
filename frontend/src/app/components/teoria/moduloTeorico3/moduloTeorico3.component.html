@@ -1,0 +1,241 @@
+<div class="container">
+    <button mat-raised-button class="btn-volver" (click)="onClickVolver()">
+     <mat-icon>arrow_back</mat-icon>
+     Volver a los módulos 
+   </button>
+     <h1 class="teoria-titulo">Módulo 3. Present Continuous - Presente Continuo</h1>
+     <hr class="teoria-hr">
+     <mat-card class="teoria-subtitle-card"> 
+       <div class="row">
+         <div class="col-2">
+           <div mat-card-avatar class="teoria-subtitle-card-img"></div>
+         </div>
+         <div class="col-10">
+           <mat-card-header>
+             <mat-card-title class="teoria-subtitle-card-title"> ¿Que es? </mat-card-title>  
+           </mat-card-header>
+           <mat-card-content class="teoria-subtitle-card-text">
+               <p>El tiempo verbal Presente Continuo se refiere a: situaciones o acciones que se están realizando en el momento, proveer contexto al expresar situaciones de la actualidad, expresar con certeza eventos o acciones del futuro o describir acciones o hechos momentáneos</p>        
+           </mat-card-content>    
+         </div>
+       </div>
+     </mat-card>
+     <hr class="teoria-hr"> 
+
+     <mat-card class="teoria-info-card"> 
+      <mat-card-header>
+        <mat-card-title class="teoria-info-card-text"> Para formar el presente continuo se utiliza el verbo auxiliar “to be” y el verbo+ing. </mat-card-title>  
+      </mat-card-header>
+      </mat-card>
+
+    <table mat-table class="mat-table mat-elevation-z8 teoria-tabla" [dataSource]="dataSource">
+      <ng-container matColumnDef="sujeto">
+        <th mat-header-cell *matHeaderCellDef> Sujeto </th>
+        <td mat-cell *matCellDef="let element"> {{element.sujeto}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="auxiliar">
+        <th mat-header-cell *matHeaderCellDef> Auxiliar (To Be) </th>
+        <td mat-cell *matCellDef="let element"> {{element.auxiliar}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="verbo">
+        <th mat-header-cell *matHeaderCellDef> Verbo + ing </th>
+        <td mat-cell *matCellDef="let element"> {{element.verbo}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+    <br>
+    <hr class="teoria-hr">
+    <h1 class="teoria-titulo">Structure - Estructura</h1>
+
+  
+    <mat-card class="teoria-subtitle-card"> 
+      <div class="row">
+        <div class="col-2">
+          <img mat-card-image src="../../../../assets/imgs/teaching.png" style="width: 100px !important; height: 100px !important; margin-left: 10px; margin-top: 10px;" alt="Photo 1">
+        </div>
+        <div class="col-10">
+          <mat-card-header>
+            <mat-card-title class="teoria-subtitle-card-title"> Affirmative Sentences (Frases afirmativas) </mat-card-title>  
+          </mat-card-header>
+          <mat-card-content class="teoria-subtitle-card-text">
+              <p>Sujeto + verbo auxiliar (to be) + verbo+ing.</p>        
+          </mat-card-content>    
+        </div>
+      </div>
+    </mat-card>
+
+    <h2 class="teoria-text-grande mt-3">Ejemplos: </h2>
+
+    <div class="row">
+      <div class="col-6">
+        <mat-card class="teoria-card-ejemplos">
+          <img mat-card-image src="../../../../assets/imgs/talking.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+          <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+            <p>
+              I’m <strong> talking </strong>.
+            </p>
+            <p>
+              Estoy hablando.
+            </p>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+      <div class="col-6">
+        <mat-card class="teoria-card-ejemplos">
+          <img mat-card-image src="../../../../assets/imgs/binge-eating.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+          <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+            <p>
+              He’s <strong> eating </strong>.
+            </p>
+            <p>
+              Está comiendo.
+            </p>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+      <div class="col-6">
+        <mat-card class="teoria-card-ejemplos">
+          <img mat-card-image src="../../../../assets/imgs/study (1).png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+          <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+            <p>
+              They’re <strong> learning </strong>.
+            </p>
+            <p>
+              Están aprendiendo.
+            </p>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+    </div>
+
+    <hr class="teoria-hr">
+    <mat-card class="teoria-subtitle-card"> 
+      <div class="row">
+        <div class="col-2">
+          <img mat-card-image src="../../../../assets/imgs/teaching.png" style="width: 100px !important; height: 100px !important; margin-left: 10px; margin-top: 10px;" alt="Photo 1">
+        </div>
+        <div class="col-10">
+          <mat-card-header>
+            <mat-card-title class="teoria-subtitle-card-title"> Negative Sentences (Frases negativas) </mat-card-title>  
+          </mat-card-header>
+          <mat-card-content class="teoria-subtitle-card-text">
+              <p>Sujeto + verbo auxiliar (to be) + auxiliar negativo (not) + verbo+ing.</p>        
+          </mat-card-content>    
+        </div>
+      </div>
+    </mat-card>
+
+    <h2 class="teoria-text-grande mt-3">Ejemplos: </h2>
+    <div class="row">
+      <div class="col-6">
+        <mat-card class="teoria-card-ejemplos">
+          <img mat-card-image src="../../../../assets/imgs/talking.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+          <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+            <p>
+              I’m not <strong> talking </strong>.
+            </p>
+            <p>               
+              No estoy hablando.
+            </p>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+      <div class="col-6">
+        <mat-card class="teoria-card-ejemplos">
+          <img mat-card-image src="../../../../assets/imgs/binge-eating.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+          <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+            <p>
+              He’s not [He isn’t] <strong> eating </strong>.
+            </p>
+            <p>
+              No está comiendo.
+            </p>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+    </div>
+
+
+    <hr class="teoria-hr">
+    <mat-card class="teoria-subtitle-card"> 
+      <div class="row">
+        <div class="col-2">
+          <img mat-card-image src="../../../../assets/imgs/teaching.png" style="width: 100px !important; height: 100px !important; margin-left: 10px; margin-top: 10px;" alt="Photo 1">
+        </div>
+        <div class="col-10">
+          <mat-card-header>
+            <mat-card-title class="teoria-subtitle-card-title"> Interrogative Sentences (Frases interrogativas) </mat-card-title>  
+          </mat-card-header>
+          <mat-card-content class="teoria-subtitle-card-text">
+              <p>Verbo auxiliar (to be) + sujeto + verbo+ing?</p>        
+          </mat-card-content>    
+        </div>
+      </div>
+    </mat-card>
+    <h2 class="teoria-text-grande mt-3">Ejemplos: </h2>
+    <div class="row">
+      <div class="col-6">
+        <mat-card class="teoria-card-ejemplos">
+          <img mat-card-image src="../../../../assets/imgs/talking.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+          <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+            <p>
+              Are you  <strong> talking? </strong>
+            </p>
+            <p>
+              ¿Estás hablando?
+            </p>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+      <div class="col-6">
+        <mat-card class="teoria-card-ejemplos">
+          <img mat-card-image src="../../../../assets/imgs/binge-eating.png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+          <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+            <p>
+              Is he <strong> eating? </strong>
+            </p>
+            <p>
+              ¿Está comiendo?
+            </p>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+      <div class="col-6">
+        <mat-card class="teoria-card-ejemplos">
+          <img mat-card-image src="../../../../assets/imgs/study (1).png" style="max-width: 300px; max-height: 300px;" alt="Photo 1">
+          <mat-card-footer class="teoria-card-ejemplos-footer" style="display: flex; flex-direction: column; height: 4em; align-items: center; font-size: 1.4em;">
+            <p>
+              Are they <strong> learning?  </strong>
+            </p>
+            <p>
+              ¿Están aprendiendo?
+            </p>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+    </div>
+
+     <hr class="teoria-hr">
+ 
+     <mat-card class="teoria-subtitle-card mt-2"> 
+       <mat-card-content class="teoria-subtitle-card-text">
+         <div class="row">
+           <div class="col-1">
+             <img src="../../../assets/imgs/chat-box.png" class="teaching-img" alt="Photo 1">
+           </div>
+           <div class="col-11">
+             <p><i>"Ahora puedes ver el siguiente video para reforzar lo aprendido."</i></p>
+           </div>
+         </div>
+       </mat-card-content>    
+     </mat-card>
+   
+     <iframe [src]='url1' frameborder="0" allowfullscreen style="height: 500px;width: 750px; margin-left: 10em; margin-top: 1em;" ></iframe>
+ 
+ 
+ </div>

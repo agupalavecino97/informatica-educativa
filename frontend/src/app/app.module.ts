@@ -35,6 +35,7 @@ import { FormsModule } from '@angular/forms';
 import { InformacionComponent } from './components/informacion/informacion.component';
 import { ModuloTeorico1 } from './components/teoria/moduloTeorico1/moduloTeorico1.component';
 import { ModuloTeorico2 } from './components/teoria/moduloTeorico2/moduloTeorico2.component';
+import { ModuloTeorico3 } from './components/teoria/moduloTeorico3/moduloTeorico3.component';
 import { ModuloEvaluacion1 } from './components/evaluacion/moduloEvaluacion1/moduloEvaluacion1.component';
 import { ModuloEvaluacion2 } from './components/evaluacion/moduloEvaluacion2/moduloEvaluacion2.component';
 import { ResultadoComponent } from './components/resultado/resultado.component';
@@ -50,6 +51,7 @@ import { NavBarComponent } from './components/navbar/navbar.component';
     InformacionComponent,
     ModuloTeorico1,
     ModuloTeorico2,
+    ModuloTeorico3,
     ModuloEvaluacion1,
     ModuloEvaluacion2,
     ResultadoComponent,
