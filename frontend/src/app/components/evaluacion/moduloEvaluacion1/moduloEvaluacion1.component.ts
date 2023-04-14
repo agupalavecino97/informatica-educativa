@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { Estudiante } from 'src/app/models/estudiante.model';
 
 export interface Datos {
@@ -20,6 +20,8 @@ export class ModuloEvaluacion1 {
   @Output() actualizarEstudiante: EventEmitter<Datos> = new EventEmitter<Datos>();
   @Output() volver: EventEmitter<boolean> = new EventEmitter<boolean>();
 
+  @ViewChild('firstname') firstname: ElementRef;
+  
   public input1: string;
   public input2: string;
   public input3: string;
@@ -36,6 +38,8 @@ export class ModuloEvaluacion1 {
 
    onClickVolver() {
       this.volver.emit(true);
+      this.firstname.nativeElement.focus();
+      this.firstname.nativeElement.click();
    }
 
    ComprobarEvaluacion(){
