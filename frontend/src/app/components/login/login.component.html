@@ -1,19 +1,15 @@
 
-    <mat-card color="primary">
-      <mat-card-title>Identificarse</mat-card-title>
+    <mat-card class="login-card">
+      <mat-card-title>EnglishSoft</mat-card-title>
+      <mat-card-subtitle style="color: #eee"> Identificarse </mat-card-subtitle>
       <mat-card-content>
       <form ngNativeValidate>
         <p>
-          <mat-form-field>
-            <input class="form-control" type="text" matInput required 
-            placeholder="Número de Documento" ngModel name="dni"
-            [(ngModel)]="dni_ingresado"
-            onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-          </mat-form-field>
+          <input type="text" required onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="form-control" (change)="onChange($event.target.value)" placeholder="ingrear DNI">
         </p>
       
         <div class="button">
-          <button type="submit" (click)="login()" mat-flat-button color="primary">
+          <button type="submit" (click)="login()" mat-flat-button color="accent">
             Ingresar
             <mat-icon>login</mat-icon>
           </button>

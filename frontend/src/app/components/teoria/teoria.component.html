@@ -34,6 +34,17 @@
           <mat-icon>edit</mat-icon>
           Ir a la evaluación
         </button>
+
+        <button mat-raised-button color="primary" style="position: relative;left: 845px;bottom: 10px;" (click)="irModuloSiguiente()" *ngIf="modulo_actual > 0 && modulo_actual < 3 ">
+          <mat-icon>forward</mat-icon>
+          Ir al módulo siguiente
+        </button>
+
+        <button mat-raised-button color="primary" style="position: relative;left: 10px;bottom: 10px;" (click)="irModuloAnterior()" *ngIf="modulo_actual > 0">
+          <mat-icon>reply</mat-icon>
+          Ir al módulo anterior
+        </button>
+
       </div>
     </div>
   </div>

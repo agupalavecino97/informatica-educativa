@@ -69,4 +69,12 @@ export class TeoriaComponent implements OnInit {
     this._estudianteService.updateEstudiante(this.estudiante);
     this._router.navigate(['/login']);
   }
+
+  irModuloSiguiente () {
+    this.modulo_actual = this.modulo_actual + 1;
+  }
+
+  irModuloAnterior () {
+    this.modulo_actual = this.modulo_actual - 1;
+  }
 }

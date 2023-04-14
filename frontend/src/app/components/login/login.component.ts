@@ -18,7 +18,9 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
+  onChange(dni) {
+    this.dni_ingresado = dni;
+  }
   login(){ 
       this._estudianteService.obtenerEstudiante(this.dni_ingresado).subscribe(
         response =>{
