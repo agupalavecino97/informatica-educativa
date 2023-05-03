@@ -57,7 +57,7 @@ export class ModuloEvaluacion1 {
       if (this.input2 === 'my'){
          puntaje += 10;
          correctas += 1;
-         this.respuestas.push( 'Today its my birthday |  Correcta')
+         this.respuestas.push( 'Today its my birthday -  Correcta')
       }else{
          incorrectas += 1;
          this.respuestas.push( 'Today its '+ this.input2 +' birthday - Incorrecta  ')
@@ -86,7 +86,7 @@ export class ModuloEvaluacion1 {
          incorrectas += 1;
          this.respuestas.push( 'You work with '+ this.input5 +' hands - Incorrecta  ')
       }
-      if (this.input6 === 'gis'){
+      if (this.input6 === 'his'){
          this.respuestas.push( 'His glasses are black - Correcta  ')
          puntaje += 10;
          correctas += 1;

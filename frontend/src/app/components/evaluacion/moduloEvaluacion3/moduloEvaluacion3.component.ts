@@ -119,7 +119,7 @@ export class ModuloEvaluacion3 {
 
     if (this.input7 === 'am working') {
       this.respuestas.push(
-        'am working - Correcta  '
+        'I am working now - Correcta  '
       );
       correctas += 1;
       puntaje += 10;
@@ -130,7 +130,7 @@ export class ModuloEvaluacion3 {
       );
     }
 
-    if (this.input8=== 'Nell is not watching television at the moment.') {
+    if (this.input8=== 'is not watching') {
       this.respuestas.push(
         'Nell is not watching television at the moment - Correcta  '
       );
@@ -144,7 +144,7 @@ export class ModuloEvaluacion3 {
     }
 
 
-    if (this.input9 === 'They are going to the cinema') {
+    if (this.input9 === 'are going') {
       this.respuestas.push(
         'They are going to the cinema - Correcta  '
       );
@@ -158,7 +158,7 @@ export class ModuloEvaluacion3 {
     }
 
 
-    if (this.input10 == 'John is reading the newspaper') {
+    if (this.input10 == 'is reading') {
       this.respuestas.push(
         'John is reading the newspaper - Correcta  '
       );
@@ -171,7 +171,7 @@ export class ModuloEvaluacion3 {
       );
     }
 
-    if (this.input11 == 'We are not playing video games') {
+    if (this.input11 == 'are not playing') {
       this.respuestas.push(
         'We are not playing video games - Correcta  '
       );
@@ -185,7 +185,7 @@ export class ModuloEvaluacion3 {
     }
 
 
-    if (this.input12 === 'I am not drinking water') {
+    if (this.input12 === 'am not drinking') {
       this.respuestas.push(
         'I am not drinking water - Correcta  '
       );
@@ -199,7 +199,7 @@ export class ModuloEvaluacion3 {
     }
 
 
-    if (this.input13 === 'We know her') {
+    if (this.input13 === 'know') {
       this.respuestas.push(
         'We know her - Correcta  '
       );

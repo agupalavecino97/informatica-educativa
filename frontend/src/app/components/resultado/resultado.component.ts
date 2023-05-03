@@ -18,8 +18,9 @@ export class ResultadoComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void {
-        let data = []
-        let index = 0
+        let data = [];
+        let index = 0;
+        console.log(this.respuestas)
         this.respuestas.map( elem => {
             data.push({'index': index + 1, 'respuesta': elem.split('-')[0], 'resultado': elem.split('-')[1] });
             index += 1
